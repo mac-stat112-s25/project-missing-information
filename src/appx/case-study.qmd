@@ -2,4 +2,12 @@
 title: "Case Study"
 ---
 
-Your case study will go here.
+
+Professional Reports :" "NYC Ubers"
+observations : 
+- Uber has significantly increased its pickups in Manhattan, largely by replacing taxi pickups in the core areas. 
+- Despite the large shift between Uber and taxis in Manhattan, the total number of pickups in Manhattan's core remained mostly unchanged.
+- Outside of Manhattan, particularly in Brooklyn and Queens, both Uber and taxi pickups increased.
+- Overall, total pickups for Uber, yellow cabs, and green cabs in New York City increased from 48 million to 51 million between the comparable April-June periods (listed under Uber + Cabs)
+
+- structurally the way they organized this report is by showing how much change has occured, then exploring why there has been such a large increase (are ubers supplementing or replacing cabs?), and then dividing that sub question into two parts Uber data spatially and taxi cab data spatially. They then answered their overall question by summarizing their learnings and pointing out flaws in their data process ("does not show the full picture").
