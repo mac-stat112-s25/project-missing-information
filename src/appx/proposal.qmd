@@ -3,3 +3,12 @@ title: "Proposal"
 ---
 
 Your proposal will go here.
+
+
+Each team should submit a proposal for their project in the form of a rendered HTML Quarto page added as an appendix to their project website. The proposal should include the followings
+
+a title
+the names of the team members
+a short description of the project
+the reasons/inspirations behind choosing this project
+a rough implementation and responsibility plan, ie, what needs to be accomplished and who will do what when. Think about the list of deliverables when building the plan. The plan should be presented in a table format.
