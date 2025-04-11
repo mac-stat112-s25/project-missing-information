@@ -37,12 +37,20 @@ book:
 
   chapters:
     - index.qmd
-
+  
+    - part: "Teamwork"
+    chapters:
+    -src/appx/AshlynRyan.qmd
+  
   appendices:
   - src/appx/proposal.qmd
   - src/appx/case-study.qmd
+<<<<<<< HEAD
   - src/appx/AshlynRyan.qmd
   - src/appx/Shaylee_Teamwork.qmd
+=======
+
+>>>>>>> 3e6c2c4f583e80b4e48dce2ba21a071aed061411
 
 
 
