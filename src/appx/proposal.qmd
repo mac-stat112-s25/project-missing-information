@@ -2,7 +2,7 @@
 title: "Proposal"
 ---
 
-1.  ***What this project will ential!***
+1.  ***What this project will entail!***
 
 Trees at Mac, is a project done by Ashlyn and Shaylee exploring the trees of Macalester, their species, diameters, positions, and whether or not they are memorials.
 We will be doing some analysis to determine ages, and other related information regarding their health.
