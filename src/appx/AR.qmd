@@ -37,6 +37,8 @@ height field
 ```{r}
 tress1 <- tress1[, !(names(tress1) %in% c("EditDate", "Editor", "Notes", "Height", "Field"))]
   
+
+2+2 = 4
 ```
 
 
