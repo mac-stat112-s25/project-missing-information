@@ -2,3 +2,21 @@
 title: "EDA-Shaylee"
 ---
 
+```{r}
+library(readr)
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+```
+
+
+```{r}
+trees <- read_csv(here("data", "trees1.csv"))
+
+dim(trees)
+head(trees)
+tail(trees)
+
+```
+
+
