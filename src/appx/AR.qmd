@@ -1,0 +1,52 @@
+---
+title: "AR"
+---
+
+
+
+This is the EDA completed by Ashlyn!
+
+```{r}
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+
+```
+
+
+
+
+
+```{r}
+trees <- read_csv(here("data", "macTree.csv"))
+  
+
+tress1 <- trees
+```
+
+To clean:
+
+EditDate and Editor drop
+Notes
+height field
+
+
+
+
+```{r}
+tress1 <- tress1[, !(names(tress1) %in% c("EditDate", "Editor", "Notes", "Height", "Field"))]
+  
+```
+
+
+```{r}
+trees1 <- tress1
+```
+
+
+
+```{r}
+write.csv(trees1, "tress1.csv")
+```
+
