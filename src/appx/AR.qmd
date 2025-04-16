@@ -19,36 +19,9 @@ library(dplyr)
 
 
 ```{r}
-trees <- read_csv(here("data", "macTree.csv"))
+trees <- read_csv(here("data", "trees1.csv"))
   
 
-tress1 <- trees
-```
 
-To clean:
-
-EditDate and Editor drop
-Notes
-height field
-
-
-
-
-```{r}
-tress1 <- tress1[, !(names(tress1) %in% c("EditDate", "Editor", "Notes", "Height", "Field"))]
-  
-
-2+2 = 4
-```
-
-
-```{r}
-trees1 <- tress1
-```
-
-
-
-```{r}
-write.csv(trees1, "tress1.csv")
 ```
 
