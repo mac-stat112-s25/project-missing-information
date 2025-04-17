@@ -1,0 +1,41 @@
+---
+title: "Exploratory Maps"
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(gplots)
+library(leaflet)
+
+```
+
+
+
+
+
+```{r}
+trees <- read_csv(here("data", "trees1.csv"))
+  
+```
+
+```{r}
+# Just a plotting frame -- all species, label is just the common species name
+leaflet(data = trees) |> 
+  addTiles() |> 
+  addCircleMarkers(label = ~`Common Species Name`, fillColor = col2hex("green"),lng = ~x, lat = ~y, fillOpacity = 1, color = "black", radius = 2.5)
+```
+
+```{r}
+treesm <- trees|>
+  filter(`Is it a memorial?` == "Yes")
+```
+
+```{r}
+
+leaflet(data = treesm) |> 
+  addTiles() |> 
+  addCircleMarkers(label = ~`Common Species Name`, fillColor = col2hex("green"),lng = ~x, lat = ~y, fillOpacity = 1, color = "black", radius = 4)
+```

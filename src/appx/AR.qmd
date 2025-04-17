@@ -61,12 +61,12 @@ trees |>
 ```
 
 
-```{r}
-# Just a plotting frame
-leaflet(data = trees) |> 
-  addTiles() |> 
-  addCircles(color = col2hex("green"),lng = ~x, lat = ~y, opacity = 3, weight = 8)
-```
 
+
+
+```{r}
+treesm <- trees|>
+  filter(`Is it a memorial?` == "Yes")
+```
 
 
