@@ -38,7 +38,7 @@ book:
   chapters:
     - index.qmd
   
-    - part: "Teamwork"
+    - part: "Effective Teamwork"
       chapters:
        - src/appx/AshlynRyan.qmd
        - src/appx/Shaylee_Teamwork.qmd
