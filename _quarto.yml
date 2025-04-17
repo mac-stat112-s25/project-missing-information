@@ -47,6 +47,7 @@ book:
       chapters:
        - src/appx/AR.qmd
        - src/appx/SO.qmd
+       - shiny-exploration.qmd
   
   
   appendices:
