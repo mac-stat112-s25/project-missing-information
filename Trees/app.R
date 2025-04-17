@@ -30,14 +30,17 @@ server <- function(input, output, session) {
     output$leafletMap <- renderLeaflet({
         leaflet(trees) |>
         addTiles() |>
-        addCircleMarkers(
+        addAwesomeMarkers(
           lng = ~x,
           lat = ~y,
-          label = ~`Common Species Name`,
-          radius = 2,
-          color = "green",
-          fillOpacity = 0.8
-        )
+          icon = awesomeIcons(
+            icon = 'leaf',
+            iconColor = 'white',
+            markerColor = 'green',
+            library = 'fa'
+          ),
+          label = ~`Common Species Name`
+        ) 
     })
 }
 

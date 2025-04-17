@@ -40,3 +40,6 @@ leaflet(data = treesm) |>
   addTiles() |> 
   addCircleMarkers(label = ~`Common Species Name`, fillColor = col2hex("green"),lng = ~x, lat = ~y, fillOpacity = 1, color = "black", radius = 4)
 ```
+
+
+
