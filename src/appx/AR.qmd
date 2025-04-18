@@ -1,0 +1,71 @@
+---
+title: "AR"
+---
+
+
+
+This is the EDA completed by Ashlyn!
+
+```{r}
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(gplots)
+library(leaflet)
+library(here)
+
+```
+
+
+
+
+
+```{r}
+trees <- read_csv(here("data", "trees1.csv"))
+  
+```
+
+
+```{r}
+head(trees)
+```
+
+
+```{r}
+summary(trees)
+```
+
+```{r}
+
+#This I want to look cooler...
+
+trees |>
+  count(SPECIES) |>
+  arrange(desc(n)) 
+```
+
+```{r}
+trees |>
+  summarize(mean(`Diameter at Breast Heigh (DBH)`), min(`Diameter at Breast Heigh (DBH)`), max(`Diameter at Breast Heigh (DBH)`))
+```
+
+```{r}
+
+#Maybe only show a select grouping?
+
+trees |>
+  group_by(SPECIES_BIN) |>
+  summarize(mean(`Diameter at Breast Heigh (DBH)`), min(`Diameter at Breast Heigh (DBH)`), max(`Diameter at Breast Heigh (DBH)`))
+```
+
+
+
+
+
+```{r}
+treesm <- trees|>
+  filter(`Is it a memorial?` == "Yes")
+```
+
+
