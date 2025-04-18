@@ -4,10 +4,6 @@ title: "AR"
 
 
 
-
-
-
-
 This is the EDA completed by Ashlyn!
 
 ```{r}
@@ -17,6 +13,7 @@ library(ggplot2)
 library(dplyr)
 library(gplots)
 library(leaflet)
+library(here)
 
 ```
 
@@ -38,6 +35,7 @@ head(trees)
 ```{r}
 summary(trees)
 ```
+
 ```{r}
 
 #This I want to look cooler...
@@ -51,6 +49,7 @@ trees |>
 trees |>
   summarize(mean(`Diameter at Breast Heigh (DBH)`), min(`Diameter at Breast Heigh (DBH)`), max(`Diameter at Breast Heigh (DBH)`))
 ```
+
 ```{r}
 
 #Maybe only show a select grouping?
