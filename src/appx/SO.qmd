@@ -12,7 +12,7 @@ library(readr)
 
 
 ```{r}
-#trees <- read_csv(here("data", "trees1.csv"))
+trees <- read_csv(here("data", "trees1.csv"))
 
 dim(trees)
 head(trees)
