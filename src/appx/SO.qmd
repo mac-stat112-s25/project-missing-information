@@ -7,6 +7,7 @@ library(readr)
 library(ggplot2)
 library(tidyverse)
 library(dplyr)
+library(here)
 library(readr)
 ```
 
@@ -68,5 +69,8 @@ trees |>
   head(10)
 ```
 
+```{r}
+
+```
 
 
