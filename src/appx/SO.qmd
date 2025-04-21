@@ -7,16 +7,66 @@ library(readr)
 library(ggplot2)
 library(tidyverse)
 library(dplyr)
+library(readr)
 ```
 
 
 ```{r}
-trees <- read_csv(here("data", "trees1.csv"))
+#trees <- read_csv(here("data", "trees1.csv"))
 
 dim(trees)
 head(trees)
 tail(trees)
 
 ```
+
+```{r}
+trees |> 
+  count(SPECIES)|>
+  arrange(desc(n))
+
+
+```
+
+```{r}
+trees |> 
+  count(SPECIES)|>
+  arrange(desc(n))
+```
+
+```{r}
+trees |> 
+  count(SPECIES)|>
+  arrange(desc(n))|>
+  head(5)
+```
+
+The top five most common tree SPECIES on campus are :
+White spruce - 100, 
+Crabapple - 78, 
+Silver maple - 66, 
+Hackberry - 65, 
+Sugar maple - 64. 
+
+then, top 10 are :
+Honey locust - 55
+Norway maple - 54
+American elm - 31
+Red maple - 31
+Eastern redbud - 27 
+
+Why is it that these trees are most common on campus? 100 White spruce is a lot of one tree. Does the sizing of the trees play any role in this? Because it is possible that if a tree species is very small than it could skew the number of them that are planted on campus because they take up lots of or very little room. 
+
+```{r}
+trees |>
+  summarize(smallest = min(`Diameter at Breast Heigh (DBH)`), medium = mean(`Diameter at Breast Heigh (DBH)`), largest = max(`Diameter at Breast Heigh (DBH)`))
+```
+```{r}
+trees |>
+  select(`Diameter at Breast Heigh (DBH)`, SPECIES)|>
+  arrange(desc(`Diameter at Breast Heigh (DBH)`))|>
+  head(10)
+```
+
 
 
