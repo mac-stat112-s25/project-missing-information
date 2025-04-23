@@ -70,7 +70,24 @@ trees |>
 ```
 
 ```{r}
+top_9_species <- trees |>
+  filter(SPECIES %in% c("White spruce","Crabapple","Silver maple","Hackberry", "Sugar maple","Honey locust","Norway maple","American elm","Red maple"))|>
+  select('Diameter at Breast Heigh (DBH)',SPECIES)
+```
 
+
+```{r}
+sum_top_9 <- top_9_species |>
+  group_by(SPECIES) |>
+  summarize("smallest diameter" = min(`Diameter at Breast Heigh (DBH)`),"median diameter" = mean(`Diameter at Breast Heigh (DBH)`), "largest diameter" = max(`Diameter at Breast Heigh (DBH)`))
+pivot_longer()
+```
+
+```{r}
+ggplot(sum_top_9,aes(x= diameter, color= `smallest diameter`))+
+  geom_point()+
+  facet_wrap(SPECIES)+
+  labs(title ="Species and Their Smallest, Average, and Largest Diameters on Campus", x = "Diameter", caption = "Made by Shaylee")
 ```
 
 
