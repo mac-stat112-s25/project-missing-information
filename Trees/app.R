@@ -50,7 +50,7 @@ server <- function(input, output, session) {
           zoom = 15
         )
     })
-    species_pal <- colorFactor(palette = "Set1", domain = unique(trees$TFSpecies))
+    species_pal <- colorFactor(palette = "Set3", domain = unique(trees$TFSpecies))
     
     observe({
       filtered <- trees[trees$TFSpecies %in% input$selected_Species, ]
@@ -70,8 +70,9 @@ server <- function(input, output, session) {
           lng = ~x,
           lat = ~y,
           color = ~species_pal(TFSpecies),
-          weight = 2,
-          radius = 5)
+          weight = 5,
+          radius = 7,
+          fillOpacity = 0.75)
        })
 }
 
