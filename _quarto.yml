@@ -48,6 +48,9 @@ book:
        - src/appx/AR.qmd
        - src/appx/SO.qmd
 
+    - part: "Our Project"
+      chapters:
+      - src/appx/Our project.qmd
   
   
   appendices:

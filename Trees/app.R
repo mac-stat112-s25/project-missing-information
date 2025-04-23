@@ -70,9 +70,9 @@ server <- function(input, output, session) {
           lng = ~x,
           lat = ~y,
           color = ~species_pal(TFSpecies),
-          weight = 5,
-          radius = 7,
-          fillOpacity = 0.75)
+          weight = 8,
+          radius = 8,
+          fillOpacity = 0.80)
        })
 }
 
