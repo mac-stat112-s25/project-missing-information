@@ -2,4 +2,15 @@
 title: "Our project"
 ---
 
+```{r}
+library(shiny)
+library(leaflet)
+library(readr)
+library(here)
+```
+
+
+```{r}
+runApp('Trees')
+```
 
