@@ -22,7 +22,7 @@ library(here)
 
 
 ```{r}
-trees <- read_csv(here("data", "trees1.csv"))
+trees <- read_csv(here("src/appx", "Apptrees.csv"))
   
 ```
 
@@ -91,13 +91,15 @@ treesm <- trees|>
 Apptrees <- trees |>
   mutate(
     TFSpecies = ifelse(
-      !SPECIES %in% c("White spruce", "Crabapple", "Silver maple", "Hackberry", "Sugar maple"),
+      !SPECIES %in% c("White spruce", "Crabapple", "Silver maple", "Hackberry", "Sugar maple", "Honey locust", "Norway maple", "American elm", "Red maple"),
       "other",
       SPECIES
     )
   )
 
 ```
+			
+
 
 ```{r}
 Apptrees |>

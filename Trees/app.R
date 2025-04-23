@@ -50,18 +50,28 @@ server <- function(input, output, session) {
           zoom = 15
         )
     })
+    species_pal <- colorFactor(palette = "Set1", domain = unique(trees$TFSpecies))
     
     observe({
       filtered <- trees[trees$TFSpecies %in% input$selected_Species, ]
+      
       leafletProxy("leafletMap") |>
         clearMarkers() |>
+        clearShapes() |>
         addMarkers(
           data = filtered, 
           lng = ~x,
           lat = ~y,
           icon = treeIcon,
           label = ~`Common Species Name`
-        )
+        ) |>
+        addCircles(
+          data = filtered,
+          lng = ~x,
+          lat = ~y,
+          color = ~species_pal(TFSpecies),
+          weight = 2,
+          radius = 5)
        })
 }
 
