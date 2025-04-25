@@ -75,19 +75,48 @@ top_9_species <- trees |>
   select('Diameter at Breast Heigh (DBH)',SPECIES)
 ```
 
+```{r}
+species_counts <- top_9_species |>
+  count(SPECIES, name = "Count")
+```
+
 
 ```{r}
 sum_top_9 <- top_9_species |>
   group_by(SPECIES) |>
-  summarize("smallest diameter" = min(`Diameter at Breast Heigh (DBH)`),"median diameter" = mean(`Diameter at Breast Heigh (DBH)`), "largest diameter" = max(`Diameter at Breast Heigh (DBH)`))
-pivot_longer()
+  summarize(
+    "smallest diameter" = min(`Diameter at Breast Heigh (DBH)`),
+    "average diameter" = mean(`Diameter at Breast Heigh (DBH)`),
+    "largest diameter" = max(`Diameter at Breast Heigh (DBH)`),
+    .groups = "drop")
+str(sum_top_9)
 ```
 
 ```{r}
-ggplot(sum_top_9,aes(x= diameter, color= `smallest diameter`))+
-  geom_point()+
-  facet_wrap(SPECIES)+
-  labs(title ="Species and Their Smallest, Average, and Largest Diameters on Campus", x = "Diameter", caption = "Made by Shaylee")
+
+sum_top_9_long <- sum_top_9 |>
+  pivot_longer(cols = c(`smallest diameter`, `average diameter`, `largest diameter`),
+               names_to = "Type",
+               values_to = "Diameter")
+
 ```
 
+
+```{r}
+sum_top_9_long <- sum_top_9_long |>
+  left_join(species_counts, by = "SPECIES") |>
+  mutate(
+    Type = factor(Type, levels = c("smallest diameter", "average diameter", "largest diameter")),
+    SPECIES = fct_reorder(SPECIES, Count, .desc = TRUE))
+```
+
+
+```{r}
+ggplot(sum_top_9_long,aes(x= SPECIES, y = Diameter, fill = Type))+
+  geom_col(position = position_dodge())+
+  coord_flip()+
+  labs(title ="Campus Trees Diameter by Species", x = "Species (top 9)", y = "Diameter at Breast Height (inches)", fill = "Measurement Type", caption = "Data from Macalester Tree Inventory Drive (LAST UPDATED JULY 2024)")+
+  theme_minimal()
+
+```
 
