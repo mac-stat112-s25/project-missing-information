@@ -43,14 +43,14 @@ book:
     #    - src/appx/AshlynRyan.qmd
     #    - src/appx/Shaylee_Teamwork.qmd
     
-    - part: "EDA"
-      chapters:
-       - src/appx/AR.qmd
+  #  - part: "EDA"
+   #   chapters:
+     #  - src/appx/AR.qmd
     #    - src/appx/SO.qmd
 
     - part: "Our Project"
       chapters:
-        - Trees/Ourproject.qmd
+        - ProjectApp.qmd
   
   
   appendices:
