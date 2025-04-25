@@ -106,7 +106,5 @@ Apptrees |>
   count(TFSpecies) |>
   arrange(desc(n)) 
 ```
-```{r}
-write.csv(Apptrees,"apptrees.csv")
-```
+
 

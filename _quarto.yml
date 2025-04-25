@@ -38,19 +38,19 @@ book:
   chapters:
     - index.qmd
   
-    - part: "Effective Teamwork"
-      chapters:
-       - src/appx/AshlynRyan.qmd
-       - src/appx/Shaylee_Teamwork.qmd
+    # - part: "Effective Teamwork"
+    #   chapters:
+    #    - src/appx/AshlynRyan.qmd
+    #    - src/appx/Shaylee_Teamwork.qmd
     
     - part: "EDA"
       chapters:
        - src/appx/AR.qmd
-       - src/appx/SO.qmd
+    #    - src/appx/SO.qmd
 
     - part: "Our Project"
       chapters:
-      - src/appx/Our project.qmd
+        - Trees/Ourproject.qmd
   
   
   appendices:

@@ -10,9 +10,8 @@
 library(shiny)
 library(leaflet)
 library(readr)
-library(here)
 
-trees <- read_csv(here("src/appx", "Apptrees.csv"))
+trees <- read_csv("Apptrees.csv")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
@@ -50,10 +49,12 @@ server <- function(input, output, session) {
           zoom = 15
         )
     })
-    species_pal <- colorFactor(palette = "Set3", domain = unique(trees$TFSpecies))
+    
     
     observe({
       filtered <- trees[trees$TFSpecies %in% input$selected_Species, ]
+      
+      species_pal <- colorFactor(palette = "Set3", domain = unique(trees$TFSpecies))
       
       leafletProxy("leafletMap") |>
         clearMarkers() |>
