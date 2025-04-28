@@ -120,3 +120,29 @@ ggplot(sum_top_9_long,aes(x= SPECIES, y = Diameter, fill = Type))+
 
 ```
 
+```{r}
+library(dplyr)
+trees_clean <- trees %>% filter(!is.na(Memorial))
+
+```
+
+```{r}
+trees_clean |>
+  select(SPECIES, Memorial)
+
+```
+
+
+38 tree memorials!
+
+```{r}
+trees_clean |>
+  group_by(SPECIES) |>
+  summarise(Memorials = paste(Memorial, collapse = ", "), .groups = "drop")
+
+```
+Sugar maple - 5 memorials 
+white oak - 3 memorials
+Ohio buckeye - 3 
+American Elm - 3
+blue spruce - 3
