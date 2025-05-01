@@ -43,7 +43,7 @@ book:
         - src/appx/AshlynRyan.qmd
         - src/appx/Shaylee_Teamwork.qmd
     
-   - part: "EDA"
+    - part: "EDA"
       chapters:
         - src/appx/AR.qmd
         - src/appx/SO.qmd
