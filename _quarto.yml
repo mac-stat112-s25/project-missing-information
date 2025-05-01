@@ -81,6 +81,7 @@ format:
     code-block-border-left: "#1482FA"
     code-tools: true
     page-layout: full
+    code-fold: true
 
   # pdf:
   #   documentclass: scrreprt
@@ -90,6 +91,9 @@ format:
 
 execute:
   cache: true
+  echo: true
+  warning: false
+  error: false
 #   freeze: auto # remove when using GitHub action to execute code
 
 
