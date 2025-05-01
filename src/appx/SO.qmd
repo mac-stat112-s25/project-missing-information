@@ -122,8 +122,6 @@ ggplot(sum_top_9_long,aes(x= SPECIES, y = Diameter, fill = Type))+
 ```{r}
 library(ggiraph)
 
-```
-```{r}
 
 ```
 
