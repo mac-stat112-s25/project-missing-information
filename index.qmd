@@ -1,13 +1,19 @@
 ---
-execute: 
-  echo: true      # change to true to show the code
-code-fold: false  # change to true to fold the code chunks
+format: html
 ---
+
 # Report {-}
 
 Your report will go here.
 
 ```{r}
-# this is a test code
+library(shiny)
+library(leaflet)
+library(readr)
+library(here)
 ```
 
+
+::: {.center}
+<iframe src="https://idsmac-aersog--pair.shinyapps.io/trees/" width="100%" height="600px"></iframe>
+:::

@@ -1,7 +1,8 @@
 ---
-title: "Case Study"
+
 ---
 
+# Case Study {-}
 
 Professional Reports :" "NYC Ubers"
 observations : 

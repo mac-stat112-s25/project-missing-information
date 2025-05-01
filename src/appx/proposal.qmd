@@ -1,6 +1,8 @@
 ---
-title: "Proposal"
+
 ---
+
+# Proposal {-}
 
 1.  ***What this project will entail!***
 
