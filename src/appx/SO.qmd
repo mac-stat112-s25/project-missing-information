@@ -119,6 +119,14 @@ ggplot(sum_top_9_long,aes(x= SPECIES, y = Diameter, fill = Type))+
   theme_minimal()
 
 ```
+```{r}
+library(ggiraph)
+
+```
+```{r}
+
+```
+
 
 ```{r}
 library(dplyr)
@@ -146,3 +154,15 @@ white oak - 3 memorials
 Ohio buckeye - 3 
 American Elm - 3
 blue spruce - 3
+
+```{r}
+library(DataExplorer)
+
+create_report(trees)
+
+```
+```{r}
+introduce(trees)
+```
+
+
