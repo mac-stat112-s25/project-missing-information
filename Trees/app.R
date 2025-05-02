@@ -25,7 +25,7 @@ ui <- fluidPage(
                            selected = unique(trees$TFSpecies))
       ),
       mainPanel(
-    leafletOutput("leafletMap", height = 600)
+    leafletOutput("leafletMap", height = 600, width = 600)
       )
     )
 )
