@@ -10,6 +10,7 @@ library(shiny)
 library(leaflet)
 library(readr)
 library(here)
+library(bslib)
 ```
 
 
@@ -18,6 +19,7 @@ library(here)
 - Why did we want to explore this?
 - What are our research Questions?
 - What fuels this?
+- input photos of trees???.....
 
 ## Background on the Data
 
@@ -35,14 +37,11 @@ library(here)
 - What further questions does this lead to?
 
 ## The Trees Across Campus
-- from the summary stats what is next
-- introduce and explain the map
+
+After exploring these diameters and the relations to the species we wanted to learn more about how species are planted across campus. To do this we wanted to explore the trees in their place and positioning around Macalester's campus. As shown in the map below, Trees are planted across Macalester's campus - the map displays the trees on campus and if you hover over each the species will be shown. Additionally, if you want to explore by species further, you can select each of the Top 9 species you want to see. Additionally, each of the top nine species have the same shadow color. 
 
 ::: {.center}
 <iframe src="https://idsmac-aersog--pair.shinyapps.io/trees/" width="100%" height="600px"></iframe>
 :::
 
-- description of the map 
-- what do we learn from the map?
-- further questions?
-
+Seeing all the trees on campus and their various species, we learn that there are some patterns. Certain species appear to be planted more around campus while others are very spread out without patterns. There are so, so many different species of trees planted around campus, which is so cool. The boundaries of campus are lined with trees. Continuing this exploration it would be interesting to explore when various trees were planted, and see if there are further patterns!

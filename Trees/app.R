@@ -10,12 +10,12 @@
 library(shiny)
 library(leaflet)
 library(readr)
+library(bslib)
 
 trees <- read_csv("Apptrees.csv")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
-
     # Application title
     titlePanel("Trees of Macalester"),
     sidebarLayout(
