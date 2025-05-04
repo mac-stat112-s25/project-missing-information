@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Ashlyn R EDA – Trees of Macalester</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../src/appx/SO.html" rel="next">
+<link href="../../src/appx/Shaylee_Teamwork.html" rel="prev">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"implied",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary","functionality","tracking","targeting"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  ,
+"language":"en"
+  });
+});
+</script><style>html{ scroll-behavior: smooth; }</style>
+<link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><link href="../../site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-1.3.1/leaflet.js"></script><link href="../../site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="../../site_libs/proj4-2.6.2/proj4.min.js"></script><script src="../../site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="../../site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="../../site_libs/leaflet-binding-2.2.2/leaflet.js"></script><link rel="stylesheet" href="../../style/custom.css">
+</head>
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/appx/AR.html">EDA</a></li><li class="breadcrumb-item"><a href="../../src/appx/AR.html">Ashlyn R EDA</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Group Project</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Report</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Effective Teamwork</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/appx/AshlynRyan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ashlyn R Effective Teamwork</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/appx/Shaylee_Teamwork.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shaylee O Teamwork</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">EDA</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/appx/AR.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Ashlyn R EDA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/appx/SO.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Shaylee’s EDA</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/appx/proposal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proposal</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../src/appx/case-study.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Case Study</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../src/appx/AR.html">EDA</a></li><li class="breadcrumb-item"><a href="../../src/appx/AR.html">Ashlyn R EDA</a></li></ol></nav><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Ashlyn R EDA</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header><hr>
+<hr>
+<p>This is the EDA completed by Ashlyn!</p>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(gplots)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>trees <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"src/appx"</span>, <span class="st">"Apptrees.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">head</span>(trees)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 18
+   ...1  ...2  ...3  ...4 OBJECTID GlobalID        CreationDate Creator Memorial
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;        &lt;chr&gt;   &lt;chr&gt;   
+1     1     1     1     1        2 70206b04-daf7-… 12/15/2023 … mfrazi… Jimm Cr…
+2     2     2     2     2        3 27e58137-b131-… 12/15/2023 … mfrazi… &lt;NA&gt;    
+3     3     3     3     3        4 936e7fa1-1ed9-… 12/15/2023 … mfrazi… &lt;NA&gt;    
+4     4     4     4     4        5 0e5a8bf0-0452-… 12/15/2023 … mfrazi… &lt;NA&gt;    
+5     5     5     5     5        7 34eae6c7-a2a1-… 12/20/2023 … mfrazi… &lt;NA&gt;    
+6     6     6     6     6        8 8611c519-ed29-… 12/20/2023 … mfrazi… &lt;NA&gt;    
+# ℹ 9 more variables: `Is it a memorial?` &lt;chr&gt;,
+#   `Diameter at Breast Heigh (DBH)` &lt;dbl&gt;, `Common Species Name` &lt;chr&gt;,
+#   `Height (ft)` &lt;dbl&gt;, SPECIES &lt;chr&gt;, SPECIES_BIN &lt;chr&gt;, x &lt;dbl&gt;, y &lt;dbl&gt;,
+#   TFSpecies &lt;chr&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">summary</span>(trees)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code>      ...1          ...2          ...3          ...4        OBJECTID     
+ Min.   :  1   Min.   :  1   Min.   :  1   Min.   :  1   Min.   :   2.0  
+ 1st Qu.:239   1st Qu.:239   1st Qu.:239   1st Qu.:239   1st Qu.: 250.0  
+ Median :477   Median :477   Median :477   Median :477   Median : 501.0  
+ Mean   :477   Mean   :477   Mean   :477   Mean   :477   Mean   : 503.1  
+ 3rd Qu.:715   3rd Qu.:715   3rd Qu.:715   3rd Qu.:715   3rd Qu.: 741.0  
+ Max.   :953   Max.   :953   Max.   :953   Max.   :953   Max.   :1942.0  
+                                                                         
+   GlobalID         CreationDate         Creator            Memorial        
+ Length:953         Length:953         Length:953         Length:953        
+ Class :character   Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+ Is it a memorial?  Diameter at Breast Heigh (DBH) Common Species Name
+ Length:953         Min.   : 0.20                  Length:953         
+ Class :character   1st Qu.: 4.57                  Class :character   
+ Mode  :character   Median : 8.10                  Mode  :character   
+                    Mean   : 9.98                                     
+                    3rd Qu.:12.62                                     
+                    Max.   :57.75                                     
+                                                                      
+  Height (ft)       SPECIES          SPECIES_BIN              x         
+ Min.   : 36.60   Length:953         Length:953         Min.   :-93.17  
+ 1st Qu.: 46.95   Class :character   Class :character   1st Qu.:-93.17  
+ Median : 51.80   Mode  :character   Mode  :character   Median :-93.17  
+ Mean   : 58.59                                         Mean   :-93.17  
+ 3rd Qu.: 68.03                                         3rd Qu.:-93.17  
+ Max.   :103.80                                         Max.   :-93.17  
+ NA's   :943                                                            
+       y          TFSpecies        
+ Min.   :44.93   Length:953        
+ 1st Qu.:44.94   Class :character  
+ Median :44.94   Mode  :character  
+ Mean   :44.94                     
+ 3rd Qu.:44.94                     
+ Max.   :44.94                     
+                                   </code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">#This I want to look cooler...</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a></span>
+<span id="cb7-3"><a href="#cb7-3"></a>trees <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>  <span class="fu">count</span>(SPECIES) <span class="sc">|&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 67 × 2
+   SPECIES            n
+   &lt;chr&gt;          &lt;int&gt;
+ 1 White spruce     100
+ 2 Crabapple         78
+ 3 Silver maple      66
+ 4 Hackberry         65
+ 5 Sugar maple       64
+ 6 Honey locust      55
+ 7 Norway maple      54
+ 8 American elm      31
+ 9 Red maple         31
+10 Eastern redbud    27
+# ℹ 57 more rows</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>trees <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>), <span class="fu">min</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>), <span class="fu">max</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  mean(\Diameter at Breast Heigh…¹ min(\Diameter at Bre…² max(\Diameter at Bre…³
+                             &lt;dbl&gt;                  &lt;dbl&gt;                  &lt;dbl&gt;
+1                             9.98                    0.2                   57.8
+# ℹ abbreviated names: ¹​`mean(\`Diameter at Breast Heigh (DBH)\`)`,
+#   ²​`min(\`Diameter at Breast Heigh (DBH)\`)`,
+#   ³​`max(\`Diameter at Breast Heigh (DBH)\`)`</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">#Maybe only show a select grouping?</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>trees <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">group_by</span>(SPECIES_BIN) <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>), <span class="fu">min</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>), <span class="fu">max</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 68 × 4
+   SPECIES_BIN      mean(\Diameter at Breast Heigh (DBH…¹ min(\Diameter at Bre…²
+   &lt;chr&gt;                                            &lt;dbl&gt;                  &lt;dbl&gt;
+ 1 Abies balsamea                                    3.22                   1.8 
+ 2 Abies concolor                                   11.2                   11.2 
+ 3 Acer nigrum                                      16.9                   14.0 
+ 4 Acer palmatum                                     4.00                   0.9 
+ 5 Acer platanoides                                 10.9                    1.83
+ 6 Acer rubrum                                       8.54                   1.54
+ 7 Acer saccharinum                                 11.7                    2.44
+ 8 Acer saccharum                                   11.3                    1.78
+ 9 Aesculus glabra                                   3.88                   1.7 
+10 Alnus glutinosa                                   0.73                   0.73
+# ℹ 58 more rows
+# ℹ abbreviated names: ¹​`mean(\`Diameter at Breast Heigh (DBH)\`)`,
+#   ²​`min(\`Diameter at Breast Heigh (DBH)\`)`
+# ℹ 1 more variable: `max(\`Diameter at Breast Heigh (DBH)\`)` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Just a plotting frame -- all species, label is just the common species name</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">leaflet</span>(<span class="at">data =</span> trees) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb13-4"><a href="#cb13-4"></a>  <span class="fu">addCircleMarkers</span>(<span class="at">label =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Common Species Name</span><span class="st">`</span>, <span class="at">fillColor =</span> <span class="fu">col2hex</span>(<span class="st">"green"</span>),<span class="at">lng =</span> <span class="sc">~</span>x, <span class="at">lat =</span> <span class="sc">~</span>y, <span class="at">fillOpacity =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">radius =</span> <span class="fl">2.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-7a8d15c74f10d7d826c7" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-7a8d15c74f10d7d826c7">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[44.9399144138231,44.9399265424179,44.9399559011863,44.9399869144729,44.9418828924261,44.9419379162126,44.941965098081,44.9418525026599,44.9419060608446,44.9393662583083,44.9393581896685,44.9394432095096,44.9394955509689,44.9394888081473,44.9394531285358,44.9393865853747,44.9392962361611,44.9392350411894,44.9391868581392,44.93915792756,44.9391530204816,44.9391620296152,44.9391484262553,44.9391425087642,44.9391485235448,44.9391087823594,44.9391478660459,44.9392614555611,44.9393809934768,44.9389189764555,44.939495524898,44.9387365232832,44.9394826770371,44.9385082895593,44.9395054846113,44.9384176273789,44.9394839138148,44.938573581044,44.9384161037932,44.9395115960069,44.9384170016659,44.9384316944736,44.9383594748301,44.9394889035286,44.9384159092117,44.9382688944444,44.9384183592851,44.9384178601136,44.9394910972985,44.938416807761,44.9384158894992,44.9384152606067,44.9381830150492,44.9384483820546,44.9383678221291,44.9383852320969,44.938466314061,44.9383746413888,44.9382915683282,44.938245209488,44.9381775979038,44.9381932827607,44.9382313216684,44.9385036170674,44.9385105348734,44.938605803259,44.9386080403028,44.938728399233,44.9387225732658,44.9381931504956,44.93819409352,44.9381951446456,44.9381971426109,44.9381978751557,44.9381971286213,44.9389306245341,44.9381981466806,44.9382008873648,44.938197637333,44.9389425574852,44.9388607055044,44.9387336503607,44.9386491038389,44.9383963544049,44.938340885918,44.9389826485203,44.9389981309471,44.9390647832939,44.9391250691396,44.9390266133111,44.9390051892231,44.9390100937707,44.9391824425975,44.9390901618959,44.93897233771,44.9389687869502,44.9390065143985,44.9391078323553,44.9391468200247,44.9390238465952,44.9389664450001,44.9390017293962,44.9411119498138,44.9411276294181,44.9411888007535,44.9412123268033,44.9412088416751,44.9412039411306,44.9411915953428,44.9411780916573,44.9411626594151,44.9411842130487,44.9411722525857,44.9411525759973,44.9411892286849,44.9412062041433,44.9411274984315,44.9411286556916,44.9411491035827,44.9411988739913,44.9411853703076,44.9411834411188,44.9411899999789,44.9411892286849,44.941180354671,44.9411764969289,44.9411649224294,44.9411267265009,44.9410457055209,44.9409955496491,44.9409627552304,44.9409315478979,44.9410077371504,44.9410096784264,44.9410118556058,44.9410374120233,44.9410806204777,44.9411280929579,44.9411348476683,44.9411125697747,44.9411151907786,44.9410788241797,44.9410640811807,44.9410755482406,44.9410624788189,44.9410441317721,44.9410067827268,44.9408404501643,44.9407994969275,44.9408040840272,44.9407785294135,44.940607510516,44.9405981976666,44.9406635618065,44.9406619670638,44.940910123249,44.940966260721,44.9408682499725,44.9406823521708,44.9406989170122,44.9408516851799,44.940880213678,44.9407588456956,44.9407002421484,44.9407018699549,44.9406953580929,44.9406806849403,44.9406778362779,44.9407612657836,44.9408672675687,44.9408354535735,44.9406792300877,44.940627350072,44.9406139429051,44.9405533190715,44.9405988996594,44.9405635520225,44.940520539661,44.9404920058972,44.9404123682999,44.940426848218,44.9403740402465,44.9403450810157,44.9403327305921,44.9405094355686,44.9404210821945,44.9403466083654,44.9405045489533,44.9403983576466,44.9405357196379,44.9404043646653,44.9402646471094,44.9404171531845,44.940255198129,44.9402446796188,44.9401742732069,44.9401765286297,44.9402486995695,44.9401787840525,44.9402221998099,44.9401697629969,44.9402661789124,44.9401725817987,44.940172017784,44.9401731458134,44.9402661789124,44.9401708903905,44.9401723732341,44.9401820148961,44.9401851249247,44.9402973974163,44.9402519908165,44.9402395507157,44.9402572780494,44.9402320862723,44.9402479479748,44.9402890001644,44.9398463959751,44.9398645545508,44.9398722517707,44.9398571536458,44.9398068250504,44.9398316933554,44.9398455629835,44.939814408457,44.9397638528177,44.9399753899674,44.9399421600306,44.9398732170231,44.9398342476513,44.9398623690616,44.939798868386,44.9397929719456,44.9397924924981,44.9398650651553,44.9397245641637,44.9399440587393,44.9400243913556,44.9400293937399,44.9399511734915,44.9400253006488,44.9400307576796,44.9400328713092,44.9400267809527,44.9400316294565,44.9400262487301,44.9398976719833,44.9399278173382,44.9398675259767,44.9397856530589,44.9397902535929,44.9396909582808,44.9397009255906,44.9396372848442,44.9395954964823,44.9399117844981,44.9399539560595,44.9398358754823,44.939805204849,44.9397834624796,44.9397351565304,44.9397397570684,44.9397635266152,44.9397708105318,44.9396666946304,44.9396438159025,44.9396368251075,44.9395853472942,44.9395605615462,44.9396603390758,44.9398545961716,44.9398779568058,44.9398705234731,44.9398354825137,44.9398301729866,44.9399367125294,44.9399558261536,44.9399455613008,44.9399586576833,44.93997069216,44.9399275102128,44.9399211387903,44.9399758255382,44.9399565841108,44.9399427049715,44.9399379098733,44.9398747227657,44.9398151053724,44.9399187758954,44.93831561445,44.9381777085487,44.9382293574064,44.9382876849564,44.9383495734198,44.9382496651627,44.9382370141487,44.9382481065987,44.938200799612,44.9381670332289,44.9382134665312,44.938274740806,44.9380329633039,44.9381022220153,44.9379537165491,44.9380553473145,44.9379919667317,44.937917215682,44.9378539074386,44.9379369881272,44.937989346857,44.9380368333392,44.9381029755458,44.938367714664,44.9383729060513,44.9389241022971,44.9388656927289,44.9388293717604,44.9388980750222,44.9389393214849,44.93896765381,44.9389820361669,44.9390887985697,44.9391665214639,44.9392362945052,44.9392373831285,44.939099236535,44.939181171476,44.9392118017464,44.938952765924,44.9390175997051,44.9389463759528,44.9388592734975,44.9387880018575,44.9389119499629,44.9390241047627,44.93908552824,44.9391107256072,44.9393736376568,44.939428751599,44.9394178654009,44.939534152399,44.9395330707759,44.9395908883022,44.9396800085452,44.9396630008419,44.938048480325,44.9380269763856,44.9379858996867,44.9379932855715,44.9379006614842,44.9378720195883,44.9378703160304,44.9379642831709,44.9380507695336,44.9381210100384,44.9382356832326,44.9374345055728,44.9374231096423,44.9373142304127,44.937321874559,44.9372104311866,44.9372054870595,44.9369801030909,44.9367779052592,44.9368393082468,44.9368455833537,44.9368466510375,44.9368528091372,44.9368503214787,44.9369074854535,44.9369296168132,44.936837485744,44.9368289576255,44.9368606307623,44.9370079359274,44.9369773737947,44.93694798298,44.9371890223185,44.9372617349848,44.9373450791566,44.9374396538035,44.9375700629855,44.9376195172768,44.9376093378522,44.9377146027312,44.9377635831567,44.9379154599822,44.9378302267622,44.9379424377258,44.9376572786782,44.9376189723139,44.9375853658345,44.9379885278282,44.9380023762812,44.9380022993383,44.9379902237519,44.9380777065166,44.9381213642293,44.9381246486036,44.9381744871306,44.9382259744754,44.9382592295691,44.9383043827535,44.9383493146134,44.9383759322407,44.9399319969146,44.9399310488318,44.9399351082285,44.9407955266125,44.9408618544917,44.9409254983318,44.9410298319575,44.9410857156052,44.9407661263066,44.9408082075841,44.9408387734005,44.9408487665814,44.9407939687534,44.9407379938935,44.9407902604127,44.941011859421,44.9404422673049,44.9404398338503,44.9404372261688,44.9404558614562,44.9399543070598,44.9399473182103,44.9399194817117,44.9399238825716,44.9399438234674,44.939913804659,44.9399614834901,44.9399248478231,44.939957396117,44.9399280443439,44.93996350047,44.9399403319035,44.9398986124362,44.9399196406793,44.9399544692067,44.9399309846089,44.9398830329639,44.9388649671873,44.9388164086557,44.9387718078206,44.9380283270192,44.9380517354524,44.93808450737,44.9381078044994,44.9381097700372,44.9381153690537,44.9381135128892,44.9381187888729,44.9381252094589,44.9381340890322,44.9381275101104,44.9395942978596,44.9395170842444,44.9396455460894,44.9395956125246,44.9395391703017,44.9394225282803,44.9393551311011,44.9392490317784,44.939207468235,44.9391635932415,44.9390628527621,44.9390296579066,44.9389938686382,44.938991260891,44.9390448077554,44.9393989525346,44.9393486356192,44.9393144203459,44.9392651379296,44.939204648114,44.9391746441804,44.9391562641005,44.9391538255045,44.9391532080659,44.9393579206927,44.9392450721661,44.9391698204035,44.9390569861326,44.9389100467689,44.9389306855787,44.9388467828601,44.9387983832839,44.9387232326773,44.9386590344483,44.9386315426105,44.9385674530154,44.9384908516498,44.9385371575131,44.938529806672,44.9384880887234,44.9384770726262,44.9385387173411,44.9386914982513,44.9386652540344,44.9387265526266,44.9387205365299,44.9387240472445,44.9387115146093,44.9386831866089,44.9387058533344,44.9387225624557,44.9387366714441,44.9385735874028,44.9385371263547,44.9384865695908,44.938479656869,44.9384586268268,44.9385367937864,44.9371169759849,44.9371933483514,44.9372440677727,44.9372963514622,44.9370205490581,44.9370119503816,44.9370173263033,44.9370201020185,44.937020301692,44.9370070501148,44.9370143248425,44.9370283643013,44.9370261990529,44.9370266715286,44.9370435496527,44.9371276782077,44.9372511866748,44.9369128124204,44.9368444845106,44.9367810129285,44.9367044854883,44.9366242804959,44.936570732646,44.9365320993359,44.9364142635418,44.9363974227514,44.9363838530756,44.9362488359308,44.9362493026897,44.9363067324375,44.936367684433,44.936262888295,44.9363754590668,44.9363688456044,44.936372785066,44.9363620966925,44.9363745287308,44.9363728842679,44.9363713498175,44.936370154307,44.9363679330737,44.9363693651428,44.9364739849398,44.9364228489537,44.9365414230193,44.9366179570359,44.9367002376351,44.936755558905,44.9366801277336,44.9366194946592,44.9365561010452,44.9364872340963,44.9364206639693,44.9363522070201,44.936272697858,44.9362102348357,44.9363269079686,44.9362688798486,44.9362193856035,44.9361660580375,44.9361074199146,44.936061550872,44.9360052470825,44.9359517571594,44.9359468618894,44.9361588811328,44.9362068683195,44.9362787396476,44.9363266974822,44.936667127261,44.9366973779648,44.9367119198668,44.9367285195567,44.9367748738983,44.9368246786221,44.9369031956456,44.9369254160334,44.936947455816,44.9369655141999,44.9369777299005,44.9369989035633,44.9370368510564,44.9371254245728,44.9375655468478,44.9376119081444,44.9376655167053,44.9378339969758,44.9379887147804,44.9380384860209,44.9418050333221,44.9419479994925,44.9422433285526,44.9422462928611,44.9422102379069,44.942138613717,44.9420771121174,44.9420238224198,44.9420043858377,44.9391038879944,44.9402254789769,44.9389605630995,44.9413463409796,44.9414125162534,44.9413482021264,44.9414263378106,44.9413484424795,44.9414106525652,44.9413565712458,44.9414141459472,44.9414285429517,44.9413411454102,44.9414156109548,44.941334973803,44.9414173493796,44.9413372501634,44.941415549277,44.9413475440168,44.9414034432516,44.9414243583974,44.9413625520943,44.9414031513946,44.9413473437225,44.9413958282621,44.9414184207935,44.941344242023,44.9414192785605,44.9413471370697,44.9414123121442,44.9413405610596,44.9414283909827,44.941335823941,44.9413920633692,44.9414155817055,44.9414184901016,44.941412578567,44.9413351899936,44.941339411434,44.9414137447233,44.9413399175745,44.9414144002888,44.9413404650455,44.9410348329825,44.9408173016634,44.9381231975015,44.9381971731336,44.9383585299008,44.9395219868406,44.9395677958903,44.9396022685416,44.9396404845605,44.9396896140451,44.9397871460864,44.9398304604005,44.939881302759,44.9398377099715,44.9397941190586,44.9396919909387,44.9396601979119,44.9396289752463,44.9395927266145,44.9395441229154,44.9397244306304,44.9395031127969,44.9392686040994,44.938091258623,44.9380242674877,44.9379426882674,44.9378583879435,44.9377995785857,44.9377891143125,44.9377496138261,44.9375485143542,44.9375195702315,44.9374299296501,44.937331956106,44.937317237581,44.9373006978358,44.9372715087668,44.9372492770667,44.9372152430459,44.937157875889,44.9371375404029,44.9370812770943,44.9370605911988,44.9368522737056,44.9368158719755,44.9367808170697,44.9376471851063,44.937671480769,44.937662505104,44.9366887620705,44.9366887677936,44.9417388623158,44.936682441797,44.9417446949713,44.9366850121307,44.9366844080196,44.941856560649,44.9418458643944,44.9419549416816,44.9365914931191,44.9365120593255,44.9364279222377,44.9420428367929,44.9363437824829,44.9362761057047,44.9421776247621,44.9361445940915,44.9422257874989,44.9361383793197,44.9361333441648,44.9361262003235,44.9361312768133,44.9361406552502,44.9361504145971,44.9420491819101,44.9419333743487,44.9360731499291,44.9360595006876,44.9419322444463,44.9360151959547,44.9359749108016,44.9360860335281,44.9360752179186,44.9360579808548,44.936022412304,44.9360064012662,44.9380308623186,44.937981646841,44.9379771421818,44.9380279575663,44.9378114698029,44.9381499862882,44.9381494146229,44.9380215293386,44.9379310705112,44.9360687748464,44.9378473055925,44.9377622166195,44.937678503598,44.9375874706516,44.9360703143923,44.9373263888082,44.9380725513484,44.9379971543376,44.9380642154525,44.9381167896331,44.9360595280318,44.9381897014299,44.9359566269925,44.9358581549205,44.9382220682072,44.938246207198,44.9357606168412,44.9356588580104,44.9382993541475,44.9382948437902,44.935426873478,44.9383288981554,44.9382540248179,44.9382266497898,44.9353245754303,44.9383610015968,44.9350940629835,44.9383870233921,44.9351551809703,44.9383628545738,44.9384083885732,44.9383712521074,44.9344298117274,44.9383622447574,44.9343931267439,44.934349143143,44.934333796188,44.9382989834245,44.9343467183332,44.9384033281819,44.934341488426,44.938507475625,44.9343387882573,44.9343342031848,44.9385798565973,44.9343262324074,44.9343427132317,44.9385628867213,44.9343341853787,44.9343597314138,44.9343594325258,44.9386898513113,44.9343380111479,44.9343373892061,44.9387133027149,44.9343433269064,44.9343391749041,44.9386298079167,44.9343401262589,44.9387159816938,44.9343501663579,44.9379105070133,44.9378940075003,44.9378543385743,44.9377987156774,44.9377727056975,44.9377440535635,44.9376663630822,44.9376923216028,44.9376387995488,44.9375591700761,44.937559804701,44.9373916892675,44.9374637276256,44.9373745320862,44.937380133082,44.9374053375566,44.9373690659003,44.9373544955492,44.9373552789767,44.9373564782822,44.93734937847,44.9371361744867,44.9372247052447,44.9417981496131,44.9411326660425,44.9411850180431,44.9411399466061,44.9409204222658,44.9408326049187,44.9408717084151,44.9409471251782,44.9412498982645,44.9409125738519,44.9408368505587,44.9407474974786,44.9401021479561,44.9401022229886,44.9400995517048,44.9400985247771,44.9380860494053,44.9380087320193,44.9378854928926,44.9377683644467,44.937667757601,44.9375930779856,44.9364621646674,44.936466303162,44.9364426155543,44.936400040791,44.9364063649109,44.9363740950403,44.9363809183522,44.9363504709856,44.9363222321196,44.9363245595516,44.9362932848352,44.9362967422817,44.9363033773733,44.9362487411801,44.9361159659458,44.9360738157302,44.9360349569724,44.9359931519987,44.9361195950993,44.9361274676972,44.9362009816848,44.9361421916146,44.9360875978741,44.9360809417724,44.9360359750701,44.9360159889392,44.9359710775105,44.9361833408546,44.9361604925343,44.9361653019379,44.9361087775884,44.9360961833348,44.9359163360751,44.9359010836544,44.9358825168395,44.9358792590455,44.9359603413686,44.9360103515632,44.9359472262684,44.9358510161323,44.9358507560428,44.9357847377893,44.9357468664147,44.9357390370069,44.9357340819425,44.9357567911668,44.935713624492,44.9356698358573,44.9356050765141,44.9355743889947,44.9352354191749,44.9352380073791,44.9352591282659,44.9353713887683,44.9353692469866,44.9354850309046,44.9356890437458,44.9357060507184,44.9356601959813,44.9356836072876,44.935726528521,44.9355206608365,44.9355124453949,44.9354745255108,44.9354682915888,44.9354021088281,44.9354229015197,44.9353320277933,44.9352412645735,44.9351820938747,44.935011329848,44.9349997038676,44.9350462707316,44.9350764949445,44.9350797038179,44.9351076405951,44.9351659624132,44.9351674307598,44.9352419869813,44.9351583351498,44.9350867282356,44.9350950887289,44.9350451114412,44.9346661856524,44.9348609448561,44.9353408092306,44.9354249078484,44.9358250192602,44.9359144092529,44.9392627807305,44.9393048249573,44.9393570145683,44.9395808497554,44.9396338352294,44.9396682499766,44.9408511097264],[-93.16918969886891,-93.1690787308802,-93.1687432900717,-93.168546147596,-93.16983280547581,-93.1698435322586,-93.16985857275139,-93.1696457160465,-93.1695916581277,-93.1703712017582,-93.1702888936203,-93.1701855945491,-93.1701160909973,-93.17009139361519,-93.170104140709,-93.1700994236555,-93.1701053363667,-93.17009804114829,-93.1700521974244,-93.1701091658847,-93.1700298114075,-93.1700396389767,-93.1699926193581,-93.16998079034239,-93.169892417678,-93.1697829013668,-93.1697408260755,-93.1696781353468,-93.1697055546242,-93.1677953805973,-93.1697079585159,-93.1678133792424,-93.16973377879209,-93.1677994832032,-93.1697606896231,-93.1704444414033,-93.16980221963701,-93.16784401808179,-93.1703778052738,-93.16985204918581,-93.17030896198369,-93.1677959618073,-93.1677971916009,-93.1698899697689,-93.1702532763176,-93.1678000715997,-93.17020017959609,-93.17014695980539,-93.1696707395171,-93.17010052409169,-93.1700569144779,-93.1700034831218,-93.1673574689643,-93.16982984822189,-93.1674892976306,-93.1697041119299,-93.1696787021837,-93.16757740529199,-93.16944058485311,-93.16942982034099,-93.1694432977652,-93.1695253606631,-93.169516920991,-93.16757203067159,-93.1674809118574,-93.1674834585812,-93.1675728490368,-93.1675500156589,-93.16745136357279,-93.1699006219915,-93.1699503688953,-93.1700032985302,-93.17005989329139,-93.1701092620045,-93.1701684241508,-93.16754717788091,-93.17026221545299,-93.17034311143919,-93.1704320015332,-93.1674121494157,-93.1671929721644,-93.1671883961464,-93.167179223449,-93.1672461129034,-93.1671880449051,-93.1673257251971,-93.1672853872476,-93.16726059733899,-93.1673250173247,-93.16729774087941,-93.1673051304209,-93.1673707011484,-93.1674091634156,-93.16752089317571,-93.16741487220931,-93.16750155873591,-93.1676307346771,-93.16771725411709,-93.1677195367362,-93.167725217682,-93.16773460058521,-93.1678495786534,-93.17004031001819,-93.1700391772426,-93.17038173630149,-93.17023770941201,-93.17011460967539,-93.17005211567771,-93.16998248187009,-93.1697851687146,-93.1697551901369,-93.1694212028025,-93.1690253134602,-93.16894082870429,-93.1688803262716,-93.16876749877019,-93.16870209063779,-93.168621421027,-93.1684873357927,-93.16845572228119,-93.168377778159,-93.16789921236941,-93.1677487742038,-93.1676572035369,-93.1675302042137,-93.1674331825697,-93.1673083625593,-93.167278929259,-93.1672985520581,-93.1672832905797,-93.1672636677807,-93.167894421654,-93.1684930382981,-93.1686006546725,-93.1686915516029,-93.1693845551322,-93.1695098557413,-93.16974434747139,-93.17006524365721,-93.1701184715328,-93.1701934539095,-93.1702540874963,-93.17030314988379,-93.170347584151,-93.17039322305909,-93.1704422854466,-93.1704825533275,-93.1707565152347,-93.1707916914646,-93.17074355524009,-93.1708324228762,-93.1704752167866,-93.1702700784066,-93.17005986813859,-93.16995776562339,-93.16982354833679,-93.1698007958073,-93.1696701322559,-93.1696785827078,-93.1694673097328,-93.1695160648965,-93.1693645990581,-93.1688781766031,-93.1688804762903,-93.1688040081,-93.16847743545991,-93.1683583395145,-93.16827669612989,-93.1682525485168,-93.16824525689159,-93.1678501320156,-93.1680864841567,-93.1679357782931,-93.1678295435276,-93.16800001322579,-93.1683689333467,-93.1684886608077,-93.1683731446487,-93.16848745796359,-93.1684856532482,-93.16836412017339,-93.1683647220446,-93.1684970843102,-93.16837073806209,-93.16794898712099,-93.1679580735801,-93.1679672929899,-93.1696779610736,-93.169766499028,-93.16934536433131,-93.1694324425233,-93.16937909517191,-93.16967144289789,-93.16952384790009,-93.1690510340234,-93.1690260464854,-93.1688739042157,-93.1687416757991,-93.1686540550246,-93.16861343051249,-93.16850589588481,-93.16838083692249,-93.1683266712058,-93.1681753257417,-93.1680757564756,-93.1679594596806,-93.1679562733563,-93.1678169536389,-93.16766097646109,-93.1674202019139,-93.1674408523856,-93.16746853307281,-93.1674303070625,-93.1673797795227,-93.1673042078511,-93.16728004317,-93.1672870724871,-93.1675461573948,-93.1674569510938,-93.16741303605281,-93.1673720486214,-93.1674473310354,-93.1673540643494,-93.1673244361147,-93.1673175631044,-93.1672955777362,-93.16759655467889,-93.167824430317,-93.16782507081579,-93.1678321971509,-93.1677328767182,-93.1677873424722,-93.1678386048338,-93.16795075141221,-93.16809592814531,-93.1680319519274,-93.1681120466165,-93.167827168382,-93.1679505223418,-93.16824027303841,-93.1682158595239,-93.16833407332371,-93.16855430879041,-93.1687216954705,-93.16906443778571,-93.16918454792911,-93.1695147605427,-93.1696714222367,-93.16967294308439,-93.1696800757078,-93.16951434192779,-93.1695186754007,-93.1696735763967,-93.1696724930285,-93.1695170503484,-93.1694146855251,-93.1693085298114,-93.1693047389209,-93.1694011452188,-93.169371989498,-93.1694023202152,-93.1693600742441,-93.16933516036799,-93.1692837066651,-93.1693730791544,-93.1693479406995,-93.16942605101011,-93.1694197663964,-93.1694206638133,-93.1694107877351,-93.1691696969808,-93.16912519354329,-93.169089691225,-93.16912469408,-93.1690081843843,-93.1689986838019,-93.1689971836153,-93.1689526801779,-93.1689041756441,-93.1688571721952,-93.1688296702727,-93.1687646645855,-93.1687194865133,-93.1686744791209,-93.1685737671978,-93.1684516789641,-93.1684004983491,-93.16831983951811,-93.16773222543959,-93.1689346689564,-93.1689161825262,-93.1688262970988,-93.1687352187088,-93.16873453509091,-93.168629911903,-93.16860114874591,-93.16856635160509,-93.1686304967063,-93.1687190517287,-93.1687081497744,-93.1687599708882,-93.16873883981771,-93.1687661378226,-93.168623523983,-93.1688085939995,-93.1687864514261,-93.1687894634773,-93.16885374781729,-93.1688450072096,-93.16886004500741,-93.1688904691495,-93.1688377281608,-93.16895813205331,-93.1689172030123,-93.1687333915355,-93.16883533594719,-93.16854821461951,-93.1683894311048,-93.1682495930595,-93.16812315248831,-93.1679592153388,-93.1680503575093,-93.1679848927829,-93.1679527869947,-93.16814617990229,-93.1682629339398,-93.16829377849341,-93.1684851510899,-93.16849393122349,-93.1688204643377,-93.1688894289004,-93.1689454756893,-93.1690054822519,-93.1690616395336,-93.1690356431876,-93.1690000330714,-93.1688764599226,-93.16897543091071,-93.1684366366747,-93.1682425367929,-93.1682733139729,-93.1683891598136,-93.16839597892491,-93.16833656345371,-93.1681445341887,-93.1685082827085,-93.1685378956718,-93.16847810380651,-93.168558741078,-93.16857946072,-93.1686486157255,-93.1684216321145,-93.16833956652169,-93.1683049274844,-93.1683425570133,-93.1683440679796,-93.16817480022731,-93.1683135872437,-93.16829028674189,-93.1681834321388,-93.1681834501051,-93.16828881619971,-93.16817694720081,-93.1681709446581,-93.1682945546378,-93.16855360001961,-93.1686683157797,-93.1687961756891,-93.16888774635591,-93.1688902409774,-93.1691286664302,-93.1692049648389,-93.1692928901423,-93.169299522404,-93.1689314934119,-93.1689316452272,-93.1689329046652,-93.1690009646244,-93.1690085688633,-93.1690014281551,-93.16900328048121,-93.1695249564212,-93.16933475253281,-93.1690942241239,-93.1690925972749,-93.16902221696741,-93.1690454536888,-93.1691047586672,-93.1691118176288,-93.168988871504,-93.16896581983551,-93.1689835040702,-93.1691532344549,-93.1691548954399,-93.1691758737967,-93.16917482097119,-93.16908183096621,-93.16907975585799,-93.16917501949889,-93.16908376773399,-93.1690816324386,-93.16908242026111,-93.169085491601,-93.16908423755289,-93.1691652961342,-93.16858799920681,-93.16862154948601,-93.1688808472945,-93.1709017323919,-93.170800163476,-93.17072598509139,-93.1706071936749,-93.17051111346539,-93.1704059593731,-93.1702961034987,-93.17035453351809,-93.1702525675468,-93.1701670829661,-93.17010190570061,-93.1700588377709,-93.16973268015251,-93.1688724049274,-93.16882078413791,-93.1687875060482,-93.1687703015139,-93.1677641874974,-93.167739272723,-93.1676678449798,-93.1676244635381,-93.1676032031103,-93.1675078810789,-93.16748719826781,-93.16746826537479,-93.1674459620029,-93.1674128671696,-93.1673876685275,-93.1673708673368,-93.1673584768741,-93.16733091386619,-93.1672970509732,-93.1672912676194,-93.1672909532091,-93.1680869719419,-93.1679165525494,-93.16787800943381,-93.1672695993565,-93.16726992634329,-93.1672689372981,-93.1673369595281,-93.16736454409551,-93.16741732640661,-93.1674609989025,-93.1675382055079,-93.1679140372666,-93.1680102342571,-93.1680856720797,-93.16900858682961,-93.1689912457513,-93.1691069893578,-93.1691086989414,-93.1691000560606,-93.1691158744206,-93.1691191514747,-93.16910046741511,-93.1691075236817,-93.16911538394039,-93.1690922136943,-93.1692856712806,-93.1693634303499,-93.1694459720498,-93.1694016734282,-93.16940446898541,-93.1694073660522,-93.1694549138802,-93.16946448722619,-93.1694488700149,-93.1694090000877,-93.1694329168338,-93.1693990126183,-93.1693705746514,-93.16951845890669,-93.1695340985758,-93.16953537148861,-93.1695440366378,-93.1695428230139,-93.1694905850818,-93.1694907045577,-93.169547761053,-93.16950090313109,-93.1695300022581,-93.1694930087364,-93.1695190257437,-93.16951910928699,-93.1694264938795,-93.16928523020781,-93.1691237490524,-93.1690620437755,-93.1690863755433,-93.1690991684513,-93.1690377173976,-93.1689776982585,-93.1688877993565,-93.1686454473675,-93.16852329894679,-93.168520914818,-93.1683922257637,-93.16838036800191,-93.1683472848466,-93.1690425889614,-93.16902993349569,-93.1689761513596,-93.1687229270608,-93.1685256687025,-93.16843998828899,-93.1695916150085,-93.1695817622865,-93.16958418504279,-93.1695833594911,-93.1695736648725,-93.169521414364,-93.16947204115939,-93.1694202227405,-93.1696383615393,-93.1696034260579,-93.1696737839076,-93.1697187706387,-93.1697455790617,-93.16977424699741,-93.16989003714249,-93.1698919757069,-93.1698736716347,-93.169796911492,-93.1697932867898,-93.16979346465619,-93.16978997739631,-93.1697909835094,-93.16978627903229,-93.1701038837909,-93.1701519822861,-93.1702030667814,-93.17014657712311,-93.1701845354354,-93.17011346612,-93.1700661985664,-93.1698879764073,-93.1698078350058,-93.1695395720109,-93.1694577507598,-93.1693053380971,-93.1692049432793,-93.169023631814,-93.1689613614968,-93.16878737489419,-93.1687012641877,-93.1685515824035,-93.1684494996512,-93.16824870193069,-93.16831335817329,-93.16827205543321,-93.16827766541211,-93.1682773914259,-93.1682764895174,-93.16811063176991,-93.16818885257319,-93.1681937223404,-93.168190969004,-93.1681967011539,-93.1681929677556,-93.1681916310624,-93.16819182060691,-93.1689455691141,-93.16894056100639,-93.1689414727964,-93.1689418500888,-93.1689380870461,-93.1689431104251,-93.1689425849107,-93.1689434580732,-93.1690277460979,-93.1690244133482,-93.1690371523573,-93.1690441583182,-93.16904466586629,-93.17045372998329,-93.17043322863189,-93.1704740310104,-93.17043729530521,-93.17049580257969,-93.1704911376284,-93.17049886403809,-93.1704994955538,-93.1705030951031,-93.1704988846994,-93.1704479915453,-93.170505639132,-93.1705114413504,-93.1705087383198,-93.17051386141181,-93.1705057190821,-93.17050620147739,-93.1705023297385,-93.1705063748522,-93.1705208637795,-93.16954007416911,-93.1696396227739,-93.1696771669629,-93.1695994644875,-93.1695768242474,-93.16986549516901,-93.1698675630908,-93.1698759380842,-93.16987136116779,-93.17015307194259,-93.1684770716422,-93.1673363890978,-93.1703937135392,-93.1703539523081,-93.1702901602448,-93.1702520501172,-93.17023329598899,-93.17011756333601,-93.1700790193221,-93.1699568161041,-93.16978800379761,-93.1697461988992,-93.1693339763884,-93.1693402619004,-93.16925345859291,-93.16921145426851,-93.1691153794489,-93.16903115879769,-93.1689972635654,-93.1689272264143,-93.1688915570093,-93.1687974288389,-93.1687270539212,-93.1687230860626,-93.16864052549811,-93.168574283729,-93.1685071122037,-93.1684773249672,-93.1682911634976,-93.16824618215639,-93.1681405941779,-93.16809864195579,-93.16801641915779,-93.16798000325279,-93.16786098815579,-93.1677315813475,-93.167799562255,-93.16760273598631,-93.1674881531769,-93.167449110598,-93.1673886539794,-93.1673006738788,-93.1671868133148,-93.1671849690736,-93.1686695770144,-93.1688409800622,-93.16877786532859,-93.1688240629887,-93.16887280737269,-93.1689143230135,-93.16894322540951,-93.16894694443479,-93.1689386448999,-93.1689096445875,-93.1684836544967,-93.16843752690509,-93.16839828490021,-93.16838587557289,-93.16840436739309,-93.16843932353569,-93.16846843523911,-93.1685110010105,-93.16998888326481,-93.16720692569579,-93.1672107076031,-93.1672001434153,-93.167201470227,-93.1672107058064,-93.1672054596452,-93.16721849599659,-93.16727887266519,-93.167275099741,-93.1672734567223,-93.16727188287391,-93.1673149624817,-93.1673066979811,-93.16733500928559,-93.16729541963269,-93.16728240394249,-93.1673060952115,-93.1673279305611,-93.1673278865437,-93.16733973352569,-93.1673131119522,-93.16720707751099,-93.16727260871269,-93.1672773122915,-93.16727710118739,-93.168838865428,-93.1688377694833,-93.1688066177059,-93.16803643631729,-93.1679393697576,-93.1694004553127,-93.1677197235858,-93.1695117341185,-93.1675634221162,-93.1674463536684,-93.1693329424275,-93.1692159665062,-93.1692092462095,-93.16723919318071,-93.16724851949,-93.16725148572711,-93.1692096782992,-93.1672497420971,-93.1672510284846,-93.1694615901594,-93.16743039958899,-93.1695403212058,-93.1675093615024,-93.16758687623,-93.167646054546,-93.16772237990411,-93.1678803001378,-93.1679879057324,-93.16934286611649,-93.1693516264871,-93.16831739520219,-93.1684094545525,-93.1695504604904,-93.1685035845196,-93.1685877943909,-93.1680577102199,-93.1679702026331,-93.167872094926,-93.1677781607916,-93.1677048016706,-93.1698890265378,-93.16988844712451,-93.1699345810042,-93.169932520269,-93.1699147740505,-93.16975544076691,-93.1697146815075,-93.17067452959191,-93.1706746643392,-93.16769313075839,-93.1706768014313,-93.170678342042,-93.17068383344341,-93.1706638710811,-93.1675806832444,-93.1708607045363,-93.17137581199491,-93.1712854477655,-93.17128315706159,-93.17127401311031,-93.1672257786386,-93.1712784678558,-93.16722698687261,-93.16723228154289,-93.1711642605421,-93.1710325109276,-93.16722906826919,-93.16723611285759,-93.171097377376,-93.171041814779,-93.1672200078612,-93.1710485808897,-93.1709999874228,-93.17098622613091,-93.1672384610538,-93.1710612534235,-93.16720875825889,-93.1710733833747,-93.16723738936361,-93.1711050552767,-93.17100394001,-93.171178400923,-93.16724644707671,-93.1712598844075,-93.1672901114877,-93.16730480343421,-93.16740532940599,-93.1713739776351,-93.167529507121,-93.1713839022224,-93.1677925401244,-93.1713957042886,-93.1679004026372,-93.1680379553684,-93.1712350388034,-93.1681554891436,-93.1682781109765,-93.1711356231492,-93.1685261340298,-93.168761554618,-93.1689071517626,-93.1708743005381,-93.16901962532781,-93.1691485443508,-93.1709714991502,-93.1692648177896,-93.1693705782447,-93.1713804625731,-93.1695049203971,-93.17129053133171,-93.17004795827459,-93.1712899546133,-93.17137325988119,-93.1713027106904,-93.17131003824809,-93.1713942445262,-93.17134934313511,-93.1714171093452,-93.1713511011381,-93.1713667327223,-93.1714374975088,-93.1714040020268,-93.1715162258603,-93.1714692915817,-93.1714425397525,-93.17141622180969,-93.1713238040315,-93.1712437614448,-93.17118656032081,-93.1711421934272,-93.1710866739494,-93.17107129569,-93.1707692371757,-93.1706681955709,-93.1696004948551,-93.1668142738817,-93.1666577846642,-93.166509379386,-93.166522739131,-93.166638984722,-93.1667896106355,-93.1668268709569,-93.1663610837023,-93.1668935142729,-93.1668938718024,-93.1668915191147,-93.1681075218024,-93.1682435860252,-93.1686417382237,-93.168783123168,-93.17128153111091,-93.1712676431566,-93.1712890086873,-93.1713158054323,-93.171345365395,-93.1713665198216,-93.17070905094999,-93.1705514208722,-93.1704632898546,-93.17048221556099,-93.1704280938618,-93.1704578280976,-93.1704252902197,-93.1704237639821,-93.1704153593443,-93.17047249309471,-93.1704306720266,-93.1704653236404,-93.1705137688854,-93.1702445545745,-93.1702206899306,-93.1702197646659,-93.1702147547616,-93.1702153808873,-93.17044149133589,-93.1705041137927,-93.1706136624432,-93.1706042948115,-93.17060097823141,-93.1704836384924,-93.1704891227072,-93.17043482224319,-93.1704619908907,-93.1707842570073,-93.1709142351441,-93.171009447581,-93.1710098590094,-93.17093944007431,-93.17058417704069,-93.1708462317787,-93.1708936924701,-93.1709484861092,-93.1709428851134,-93.17096111282881,-93.1709858371604,-93.17101063874711,-93.1705720893102,-93.17042203113191,-93.170423584319,-93.1704483185321,-93.1704870817349,-93.1705464271375,-93.1705461226086,-93.17048326030169,-93.1704916433799,-93.17048846514039,-93.1704322368918,-93.1704904665869,-93.1705286890039,-93.1706211525961,-93.1706788145559,-93.17061969013881,-93.17083462285029,-93.1708759058275,-93.1709002789178,-93.1709418197115,-93.17100932271519,-93.1709246618896,-93.1708950408414,-93.17099499099319,-93.17091987476741,-93.17100152623679,-93.1708239158304,-93.170908251466,-93.1709126666856,-93.1704691756163,-93.1705283638138,-93.17045270680219,-93.17048437421261,-93.1704341907276,-93.1705422140388,-93.1704917323131,-93.17073135701681,-93.1708460278612,-93.1710032411207,-93.1710114283662,-93.171004173572,-93.1709143097042,-93.1709139234287,-93.17026212562141,-93.1702705787683,-93.1702785342484,-93.170273065305,-93.17027306979649,-93.1702671975095,-93.1678597942948,-93.1678538959566,-93.16785782249271,-93.1678511758579,-93.1678519223579,-93.16785299674299,-93.16983416103351],2.5,null,null,{"interactive":true,"className":"","stroke":true,"color":"black","weight":5,"opacity":0.5,"fill":true,"fillColor":"#00FF00","fillOpacity":1},null,null,null,null,["Japanese maple","Blue beech","Balsam fir","River birch","Silver maple","Red maple","Green ash","Mountain ash","Eastern white pine","White spruce","White spruce","Eastern white pine","American elm","Hackberry","Red maple","Red maple","Red maple","White spruce","Red maple","White spruce","White spruce","White spruce","White spruce","White spruce","Red maple","Honey locust","White spruce","Sugar maple","American elm","Sugar maple","Red maple","Sugar maple","White spruce","Sugar maple","White spruce","Silver maple","White spruce","Sugar maple","Silver maple","White spruce","Silver maple","Sugar maple","Sugar maple","White spruce","Silver maple","Sugar maple","Silver maple","Silver maple","Sugar maple","Silver maple","Silver maple","Silver maple","American basswood","White oak","Honey locust","Red maple","Red maple","Honey locust","Red maple","Red maple","Red maple","Red maple","Red maple","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Silver maple","Silver maple","Silver maple","Silver maple","Silver maple","Silver maple","Crabapple","Silver maple","Silver maple","Silver maple","Crabapple","Norway maple","Norway maple","Norway maple","American elm","Norway maple","White spruce","White spruce","Hackberry","White fir","White spruce","White spruce","Northern red oak","Northern red oak","Northern catalpa","Northern red oak","Northern red oak","Norway maple","American sycamore","Sugar maple","Norway maple","Sugar maple","Sugar maple","Pacific yew","Pacific yew","Lilac","Black alder","Colorado spruce","White spruce","Norway spruce","White ash","Crabapple","Northern red oak","Crabapple","Crabapple","Crabapple","Silver maple","White spruce","Tamarack","Hackberry","Hackberry","Hackberry","Silver maple","Silver maple","Silver maple","Silver maple","Silver maple","White spruce","White spruce","White spruce","Star magnolia","Crabapple","Norway maple","Sugar maple","Eastern redbud","Red maple","Silver maple","Hackberry","Eastern cottonwood","Douglas fir","Douglas fir","Crabapple","Crabapple","Norway spruce","Norway spruce","Hackberry","White spruce","Balsam fir","White spruce","White spruce","White spruce","American hornbeam","Northern catalpa","Ohio buckeye","Honey locust","Hackberry","Pacific yew","Crabapple","Hackberry","Norway maple","Crabapple","Hackberry","Nannyberry","Crabapple","Crabapple","Crabapple","Norway spruce","Sugar maple","Eastern cottonwood","Silver maple","Silver maple","American elm","White oak","Crabapple","American elm","White oak","Sugar maple","Black walnut","Sugar maple","Sugar maple","Scots pine","Sugar maple","Sugar maple","Red maple","Sugar maple","Sugar maple","Sugar maple","Sugar maple","Hackberry","Kentucky coffeetree","White oak","American elm","American elm","Hackberry","Norway maple","Crabapple","Silver maple","Silver maple","Crabapple","Norway maple","Sugar maple","Norway maple","Red pine","Sugar maple","Silver maple","Silver maple","Sugar maple","Silver maple","Norway maple","Norway maple","Norway maple","American elm","White spruce","Blue spruce","Eastern white pine","Norway spruce","Norway spruce","Norway spruce","Red maple","Crabapple","Crabapple","Crabapple","Northern red oak","Crabapple","Crabapple","Crabapple","Norway maple","Sugar maple","Sugar maple","Sugar maple","Sugar maple","Ironwood","Norway maple","Sugar maple","Sugar maple","Honey locust","White ash","Honey locust","Norway maple","Norway maple","Honey locust","Silver maple","Silver maple","Norway maple","Norway maple","Silver maple","Silver maple","Kentucky coffeetree","River birch","Kentucky coffeetree","Hackberry","Norway maple","Hackberry","Kentucky coffeetree","Kentucky coffeetree","Hackberry","Red pine","Black walnut","Green ash","Japanese yew","Japanese yew","Japanese yew","Japanese yew","Japanese yew","Japanese yew","White ash","Lilac","Swamp white oak","Swamp white oak","Swamp white oak","Lilac","Japanese yew","Japanese yew","Japanese yew","White ash","Ironwood","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","Norway maple","White spruce","White spruce","White spruce","Ironwood","Blue spruce","Red pine","Green ash","Crabapple","Japanese maple","Sugar maple","Sugar maple","Sugar maple","Eastern redbud","Saucer magnolia","Smoketree","Sugar maple","Eastern redbud","Eastern redbud","Crabapple","Red maple","Green ash","White oak","Crabapple","Green ash","Amur corktree","American sycamore","Crabapple","Star magnolia","Gray alder","Crabapple","Crabapple","Hackberry","Kentucky coffeetree","Northern pin oak","American basswood","Norway maple","Silver maple","Red maple","American basswood","White ash","Red maple","Hackberry","American elm","American elm","Silver maple","Black walnut","American elm","Kentucky coffeetree","Sugar maple","Fringe tree","American elm","Hackberry","Kentucky coffeetree","Sugar maple","Norway maple","Sugar maple","Bur oak","Black maple","Hackberry","White oak","Sugar maple","Ironwood","Lily magnolia","Kentucky coffeetree","Green ash","Green ash","Green ash","Amur corktree","Green ash","Green ash","Norway maple","Lily magnolia","Hackberry","Sugar maple","Sugar maple","Sugar maple","Sugar maple","Sugar maple","Silver maple","Sugar maple","Silver maple","Tulip tree","Sugar maple","Sugar maple","Sugar maple","Lilac","Honey locust","Honey locust","Crabapple","Crabapple","Crabapple","Crabapple","Crabapple","Crabapple","White oak","White oak","White oak","White oak","Japanese maple","Kentucky coffeetree","Honey locust","Honey locust","Green ash","Green ash","Honey locust","Honey locust","Eastern white pine","Eastern white pine","Eastern white pine","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Gray birch","Gray birch","Gray birch","Norway maple","Norway maple","Norway maple","Norway maple","Norway maple","Silver maple","Silver maple","Sugar maple","American basswood","Sugar maple","Honey locust","Honey locust","Gray birch","Sweet cherry","Crabapple","Crabapple","Crabapple","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","White spruce","Red pine","American elm","Black maple","Sugar maple","Norway spruce","Norway spruce","Norway spruce","American hornbeam","American hornbeam","American hornbeam","American hornbeam","American hornbeam","American hornbeam","American hornbeam","American hornbeam","American elm","Ohio buckeye","Norway maple","Norway maple","Norway maple","Red maple","American elm","Saucer magnolia","Yulan magnolia","Yulan magnolia","Pagoda dogwood","Scots pine","Crabapple","American hornbeam","Green ash","Swamp white oak","Swamp white oak","Swamp white oak","Kentucky coffeetree","Eastern white pine","Eastern white pine","Eastern white pine","Eastern white pine","Eastern white pine","Norway maple","Silver maple","Silver maple","American elm","Black maple","Green ash","White ash","Norway maple","Green ash","Silver maple","Green ash","Norway maple","Red maple","Gray birch","Ginkgo","Fringe tree","Lilac","Green ash","Sugar maple","River birch","Teak","Crabapple","Crabapple","Japanese maple","Japanese maple","Japanese maple","Japanese maple","Japanese maple","River birch","Cockspur hawthorn","Cockspur hawthorn","Sugar maple","Ohio buckeye","Mulberry","Sugar maple","Japanese maple","Japanese maple","Japanese maple","Eastern redbud","Eastern redbud","Eastern redbud","Lilac","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Eastern redbud","Serviceberry","Serviceberry","Serviceberry","American elm","American elm","American elm","American elm","American elm","American elm","River birch","River birch","River birch","River birch","Honey locust","Honey locust","Crabapple","Honey locust","Norway maple","Honey locust","Honey locust","Honey locust","Honey locust","Lilac","Lilac","Honey locust","Honey locust","Honey locust","Honey locust","Ginkgo","Yellowwood","Red maple","Red maple","Red maple","Red maple","Silver maple","Silver maple","Silver maple","Silver maple","Silver maple","Silver maple","Silver maple","Silver maple","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Honey locust","Swamp white oak","White spruce","White spruce","White spruce","Lilac","Lilac","Eastern white pine","Eastern white pine","Eastern white pine","Eastern white pine","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Japanese yew","Panicle hydrangea","River birch","River birch","River birch","Crabapple","Crabapple","Quaking Aspen","Blue spruce","Red maple","Ironwood","Lilac","Hackberry","White spruce","White spruce","Hackberry","White spruce","Ohio buckeye","Hackberry","Ohio buckeye","American elm","Ohio buckeye","Ohio buckeye","Hackberry","Hackberry","Hackberry","Hackberry","Hackberry","Scots pine","Hackberry","White spruce","Scots pine","Hackberry","Scots pine","Hackberry","Hackberry","Hackberry","Hackberry","Hackberry","Hackberry","Hackberry","Hackberry","Scots pine","Scots pine","Hackberry","Hackberry","Hackberry","Hackberry","Hackberry","American elm","Hackberry","Hackberry","Norway maple","Norway maple","Crabapple","Smoketree","Siberian pea-tree","Cockspur hawthorn","Cockspur hawthorn","Cockspur hawthorn","Cockspur hawthorn","Cockspur hawthorn","Pagoda dogwood","Pagoda dogwood","Eastern redbud","Eastern redbud","Eastern redbud","Lilac","Lilac","Lilac","Lilac","Lilac","Hackberry","Norway maple","Norway maple","Norway maple","Norway maple","Norway maple","Norway maple","Norway maple","Red pine","Red pine","Red pine","Red pine","Crabapple","Crabapple","Crabapple","Crabapple","Crabapple","Crabapple","Crabapple","Crabapple","Crabapple","Crabapple","Norway maple","White spruce","White spruce","White spruce","Panicle hydrangea","Panicle hydrangea","Panicle hydrangea","Hackberry","Hackberry","American elm","Hackberry","Honey locust","Hackberry","Hackberry","Cherry plum","American sycamore","American elm","Norway maple","Norway maple","Norway maple","American sycamore","Norway maple","Norway maple","Lilac","Hackberry","Norway maple","Hackberry","Hackberry","Hackberry","Hackberry","Hackberry","Hackberry","Katsura tree","Serviceberry","American basswood","American basswood","Serviceberry","American basswood","American basswood","American basswood","American basswood","American basswood","American basswood","American basswood","Serviceberry","Serviceberry","Serviceberry","Serviceberry","Silver maple","Lilac","Lilac","Honey locust","Honey locust","Green ash","Honey locust","Honey locust","Honey locust","Honey locust","Green ash","Sugar maple","American basswood","American hornbeam","American hornbeam","American hornbeam","Bradford Pear","Bur oak","Bradford Pear","Bradford Pear","Norway maple","Hackberry","Bradford Pear","Bradford Pear","White spruce","White spruce","Red Pine","White spruce","Silver maple","Silver maple","Red Pine","White spruce","Red Pine","White spruce","Bur oak","White spruce","Black walnut","Silver maple","White spruce","River birch","White spruce","White spruce","Ginkgo","American basswood","Ginkgo","American elm","Ginkgo","American basswood","Ginkgo","Ginkgo","Silver Maple","Ginkgo","Ginkgo","Green ash","Ginkgo","Ginkgo","Ginkgo","River birch","Ginkgo","Ginkgo","Crabapple","Ginkgo","Ginkgo","Northern red oak","Ginkgo","Japanese yew","Ginkgo","American hornbeam","American basswood","American hornbeam","American hornbeam","American basswood","American hornbeam","American basswood","American hornbeam","American hornbeam","American basswood","Northern catalpa","American basswood","American basswood","White ash","Northern red oak","Northern catalpa","American elm","Northern catalpa","Green ash","Northern catalpa","Mulberry","Northern pin oak","Northern catalpa","Japanese yew","River birch","White ash","American elm","Northern catalpa","American basswood","Silver maple","Lilac","Ginkgo","Silver maple","Red maple","Silver maple","Quaking aspen","Quaking aspen","Quaking aspen","Quaking aspen","Swamp white oak","Swamp white oak","Swamp white oak","Swamp white oak","Swamp white oak","Swamp white oak","American basswood","Honey locust","White spruce","Gray birch","White spruce","White spruce","White spruce","White spruce","White spruce","Hackberry","White spruce","White spruce","White spruce","Northern pin oak","Crabapple","Crabapple","Crabapple","Crabapple","White spruce","Crabapple","Bur oak","Crabapple","Northern pin oak","White spruce","Hackberry","White spruce","White spruce","Crabapple","Sugar maple","Hackberry","Silver maple","Silver maple","Bur oak","White spruce","White spruce","Sugar maple","Red maple","Sugar maple","American elm","Silver maple","Gray birch","Gray birch","White spruce","White spruce","White spruce","Crabapple","Gray birch","White spruce","Crabapple","Crabapple","Gray birch","White spruce","Gray birch","White spruce","Crabapple","Northern pin oak","White spruce","White spruce","Red pine","Red pine","American elm","Eastern redbud","Eastern redbud","White oak","Sugar maple","Hackberry","Silver maple","Sugar maple","Red maple","Sugar maple","White spruce","White spruce","White spruce","Gray birch","Sugar maple","Cypress","Honey locust","White spruce","Kentucky coffeetree","Hackberry","Hackberry","Sugar maple","Red maple","Northern pin oak","Northern pin oak","Northern pin oak","Northern pin oak","Northern pin oak","Northern pin oak",null,null,null,null,null,null,null],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9343262324074,44.9422462928611],"lng":[-93.1715162258603,-93.1663610837023]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>treesm <span class="ot">&lt;-</span> trees<span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Is it a memorial?</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Yes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">leaflet</span>(<span class="at">data =</span> treesm) <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">addCircleMarkers</span>(<span class="at">label =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Common Species Name</span><span class="st">`</span>, <span class="at">fillColor =</span> <span class="fu">col2hex</span>(<span class="st">"green"</span>),<span class="at">lng =</span> <span class="sc">~</span>x, <span class="at">lat =</span> <span class="sc">~</span>y, <span class="at">fillOpacity =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">radius =</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-c3b51b23974511311b71" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-c3b51b23974511311b71">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org/copyright/\">OpenStreetMap<\/a>,  <a href=\"https://opendatacommons.org/licenses/odbl/\">ODbL<\/a>"}]},{"method":"addCircleMarkers","args":[[44.9399144138231,44.9391620296152,44.9391078323553,44.9390017293962,44.9406792300877,44.940627350072,44.9405533190715,44.939798868386,44.9399117844981,44.9398151053724,44.9382876849564,44.9382496651627,44.9382481065987,44.938200799612,44.938274740806,44.9380368333392,44.9388293717604,44.9388980750222,44.9391665214639,44.9392373831285,44.9390175997051,44.9393736376568,44.939428751599,44.9394178654009,44.939534152399,44.9395908883022,44.9396800085452,44.9396630008419,44.938048480325,44.9380507695336,44.9381210100384,44.9368503214787,44.9388649671873,44.9395942978596,44.938991260891,44.9384880887234,44.9384586268268,44.9364739849398,44.9363266974822,44.9401021479561],[-93.16918969886891,-93.1700396389767,-93.16771725411709,-93.1678495786534,-93.1680864841567,-93.1679357782931,-93.16800001322579,-93.1677873424722,-93.1694146855251,-93.16831983951811,-93.1687352187088,-93.168629911903,-93.16856635160509,-93.1686304967063,-93.1687599708882,-93.1688904691495,-93.16854821461951,-93.1683894311048,-93.1679848927829,-93.16814617990229,-93.1688204643377,-93.16897543091071,-93.1684366366747,-93.1682425367929,-93.1682733139729,-93.16839597892491,-93.16833656345371,-93.1681445341887,-93.1685082827085,-93.1683049274844,-93.1683425570133,-93.16888774635591,-93.1680869719419,-93.16900858682961,-93.1694459720498,-93.1691237490524,-93.1685256687025,-93.16824870193069,-93.16904466586629,-93.1681075218024],4,null,null,{"interactive":true,"className":"","stroke":true,"color":"black","weight":5,"opacity":0.5,"fill":true,"fillColor":"#00FF00","fillOpacity":1},null,null,null,null,["Japanese maple","White spruce","American sycamore","Sugar maple","White oak","Crabapple","White oak","Norway maple","Red pine","Blue spruce","Sugar maple","Sugar maple","Saucer magnolia","Smoketree","Eastern redbud","Star magnolia","Northern pin oak","American basswood","White ash","Hackberry","American elm","Norway maple","Sugar maple","Bur oak","Black maple","White oak","Sugar maple","Ironwood","Lily magnolia","Norway maple","Lily magnolia","Lilac","American elm","American elm","American hornbeam","Fringe tree","Ohio buckeye","Ginkgo","Honey locust","Quaking aspen"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[44.9363266974822,44.9406792300877],"lng":[-93.1700396389767,-93.16771725411709]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>treesm <span class="ot">&lt;-</span> trees<span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Is it a memorial?</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Yes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>Apptrees <span class="ot">&lt;-</span> trees <span class="sc">|&gt;</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-3"><a href="#cb17-3"></a>    <span class="at">TFSpecies =</span> <span class="fu">ifelse</span>(</span>
+<span id="cb17-4"><a href="#cb17-4"></a>      <span class="sc">!</span>SPECIES <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"White spruce"</span>, <span class="st">"Crabapple"</span>, <span class="st">"Silver maple"</span>, <span class="st">"Hackberry"</span>, <span class="st">"Sugar maple"</span>, <span class="st">"Honey locust"</span>, <span class="st">"Norway maple"</span>, <span class="st">"American elm"</span>, <span class="st">"Red maple"</span>),</span>
+<span id="cb17-5"><a href="#cb17-5"></a>      <span class="st">"other"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6"></a>      SPECIES</span>
+<span id="cb17-7"><a href="#cb17-7"></a>    )</span>
+<span id="cb17-8"><a href="#cb17-8"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>Apptrees <span class="sc">|&gt;</span></span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">count</span>(TFSpecies) <span class="sc">|&gt;</span></span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+   TFSpecies        n
+   &lt;chr&gt;        &lt;int&gt;
+ 1 other          409
+ 2 White spruce   100
+ 3 Crabapple       78
+ 4 Silver maple    66
+ 5 Hackberry       65
+ 6 Sugar maple     64
+ 7 Honey locust    55
+ 8 Norway maple    54
+ 9 American elm    31
+10 Red maple       31</code></pre>
+</div>
+</div>
+
+
+<!-- -->
+
+
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation column-page-right"><div class="nav-page nav-page-previous">
+      <a href="../../src/appx/Shaylee_Teamwork.html" class="pagination-link" aria-label="Shaylee O Teamwork">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Shaylee O Teamwork</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../src/appx/SO.html" class="pagination-link" aria-label="Shaylee's EDA">
+        <span class="nav-page-text">Shaylee’s EDA</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb20" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1"></a><span class="co">---</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="co">---</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a></span>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="fu"># Ashlyn R EDA {-}</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a></span>
+<span id="cb20-7"><a href="#cb20-7"></a>This is the EDA completed by Ashlyn!</span>
+<span id="cb20-8"><a href="#cb20-8"></a></span>
+<span id="cb20-11"><a href="#cb20-11"></a><span class="in">```{r}</span></span>
+<span id="cb20-12"><a href="#cb20-12"></a><span class="fu">library</span>(readr)</span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb20-14"><a href="#cb20-14"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb20-15"><a href="#cb20-15"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb20-16"><a href="#cb20-16"></a><span class="fu">library</span>(gplots)</span>
+<span id="cb20-17"><a href="#cb20-17"></a><span class="fu">library</span>(leaflet)</span>
+<span id="cb20-18"><a href="#cb20-18"></a><span class="fu">library</span>(here)</span>
+<span id="cb20-19"><a href="#cb20-19"></a></span>
+<span id="cb20-20"><a href="#cb20-20"></a><span class="in">```</span></span>
+<span id="cb20-21"><a href="#cb20-21"></a></span>
+<span id="cb20-22"><a href="#cb20-22"></a></span>
+<span id="cb20-23"><a href="#cb20-23"></a></span>
+<span id="cb20-24"><a href="#cb20-24"></a></span>
+<span id="cb20-25"><a href="#cb20-25"></a></span>
+<span id="cb20-28"><a href="#cb20-28"></a><span class="in">```{r}</span></span>
+<span id="cb20-29"><a href="#cb20-29"></a>trees <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"src/appx"</span>, <span class="st">"Apptrees.csv"</span>))</span>
+<span id="cb20-30"><a href="#cb20-30"></a>  </span>
+<span id="cb20-31"><a href="#cb20-31"></a><span class="in">```</span></span>
+<span id="cb20-32"><a href="#cb20-32"></a></span>
+<span id="cb20-33"><a href="#cb20-33"></a></span>
+<span id="cb20-36"><a href="#cb20-36"></a><span class="in">```{r}</span></span>
+<span id="cb20-37"><a href="#cb20-37"></a><span class="fu">head</span>(trees)</span>
+<span id="cb20-38"><a href="#cb20-38"></a><span class="in">```</span></span>
+<span id="cb20-39"><a href="#cb20-39"></a></span>
+<span id="cb20-40"><a href="#cb20-40"></a></span>
+<span id="cb20-43"><a href="#cb20-43"></a><span class="in">```{r}</span></span>
+<span id="cb20-44"><a href="#cb20-44"></a><span class="fu">summary</span>(trees)</span>
+<span id="cb20-45"><a href="#cb20-45"></a><span class="in">```</span></span>
+<span id="cb20-46"><a href="#cb20-46"></a></span>
+<span id="cb20-49"><a href="#cb20-49"></a><span class="in">```{r}</span></span>
+<span id="cb20-50"><a href="#cb20-50"></a><span class="co">#This I want to look cooler...</span></span>
+<span id="cb20-51"><a href="#cb20-51"></a></span>
+<span id="cb20-52"><a href="#cb20-52"></a>trees <span class="sc">|&gt;</span></span>
+<span id="cb20-53"><a href="#cb20-53"></a>  <span class="fu">count</span>(SPECIES) <span class="sc">|&gt;</span></span>
+<span id="cb20-54"><a href="#cb20-54"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) </span>
+<span id="cb20-55"><a href="#cb20-55"></a><span class="in">```</span></span>
+<span id="cb20-56"><a href="#cb20-56"></a></span>
+<span id="cb20-59"><a href="#cb20-59"></a><span class="in">```{r}</span></span>
+<span id="cb20-60"><a href="#cb20-60"></a>trees <span class="sc">|&gt;</span></span>
+<span id="cb20-61"><a href="#cb20-61"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>), <span class="fu">min</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>), <span class="fu">max</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>))</span>
+<span id="cb20-62"><a href="#cb20-62"></a><span class="in">```</span></span>
+<span id="cb20-63"><a href="#cb20-63"></a></span>
+<span id="cb20-66"><a href="#cb20-66"></a><span class="in">```{r}</span></span>
+<span id="cb20-67"><a href="#cb20-67"></a><span class="co">#Maybe only show a select grouping?</span></span>
+<span id="cb20-68"><a href="#cb20-68"></a></span>
+<span id="cb20-69"><a href="#cb20-69"></a>trees <span class="sc">|&gt;</span></span>
+<span id="cb20-70"><a href="#cb20-70"></a>  <span class="fu">group_by</span>(SPECIES_BIN) <span class="sc">|&gt;</span></span>
+<span id="cb20-71"><a href="#cb20-71"></a>  <span class="fu">summarize</span>(<span class="fu">mean</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>), <span class="fu">min</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>), <span class="fu">max</span>(<span class="st">`</span><span class="at">Diameter at Breast Heigh (DBH)</span><span class="st">`</span>))</span>
+<span id="cb20-72"><a href="#cb20-72"></a><span class="in">```</span></span>
+<span id="cb20-73"><a href="#cb20-73"></a></span>
+<span id="cb20-76"><a href="#cb20-76"></a><span class="in">```{r}</span></span>
+<span id="cb20-77"><a href="#cb20-77"></a><span class="co"># Just a plotting frame -- all species, label is just the common species name</span></span>
+<span id="cb20-78"><a href="#cb20-78"></a><span class="fu">leaflet</span>(<span class="at">data =</span> trees) <span class="sc">|&gt;</span> </span>
+<span id="cb20-79"><a href="#cb20-79"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb20-80"><a href="#cb20-80"></a>  <span class="fu">addCircleMarkers</span>(<span class="at">label =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Common Species Name</span><span class="st">`</span>, <span class="at">fillColor =</span> <span class="fu">col2hex</span>(<span class="st">"green"</span>),<span class="at">lng =</span> <span class="sc">~</span>x, <span class="at">lat =</span> <span class="sc">~</span>y, <span class="at">fillOpacity =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">radius =</span> <span class="fl">2.5</span>)</span>
+<span id="cb20-81"><a href="#cb20-81"></a><span class="in">```</span></span>
+<span id="cb20-82"><a href="#cb20-82"></a></span>
+<span id="cb20-85"><a href="#cb20-85"></a><span class="in">```{r}</span></span>
+<span id="cb20-86"><a href="#cb20-86"></a>treesm <span class="ot">&lt;-</span> trees<span class="sc">|&gt;</span></span>
+<span id="cb20-87"><a href="#cb20-87"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Is it a memorial?</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Yes"</span>)</span>
+<span id="cb20-88"><a href="#cb20-88"></a><span class="in">```</span></span>
+<span id="cb20-89"><a href="#cb20-89"></a></span>
+<span id="cb20-92"><a href="#cb20-92"></a><span class="in">```{r}</span></span>
+<span id="cb20-93"><a href="#cb20-93"></a><span class="fu">leaflet</span>(<span class="at">data =</span> treesm) <span class="sc">|&gt;</span> </span>
+<span id="cb20-94"><a href="#cb20-94"></a>  <span class="fu">addTiles</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb20-95"><a href="#cb20-95"></a>  <span class="fu">addCircleMarkers</span>(<span class="at">label =</span> <span class="sc">~</span><span class="st">`</span><span class="at">Common Species Name</span><span class="st">`</span>, <span class="at">fillColor =</span> <span class="fu">col2hex</span>(<span class="st">"green"</span>),<span class="at">lng =</span> <span class="sc">~</span>x, <span class="at">lat =</span> <span class="sc">~</span>y, <span class="at">fillOpacity =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">radius =</span> <span class="dv">4</span>)</span>
+<span id="cb20-96"><a href="#cb20-96"></a><span class="in">```</span></span>
+<span id="cb20-97"><a href="#cb20-97"></a></span>
+<span id="cb20-98"><a href="#cb20-98"></a></span>
+<span id="cb20-99"><a href="#cb20-99"></a></span>
+<span id="cb20-102"><a href="#cb20-102"></a><span class="in">```{r}</span></span>
+<span id="cb20-103"><a href="#cb20-103"></a>treesm <span class="ot">&lt;-</span> trees<span class="sc">|&gt;</span></span>
+<span id="cb20-104"><a href="#cb20-104"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Is it a memorial?</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Yes"</span>)</span>
+<span id="cb20-105"><a href="#cb20-105"></a><span class="in">```</span></span>
+<span id="cb20-106"><a href="#cb20-106"></a></span>
+<span id="cb20-107"><a href="#cb20-107"></a></span>
+<span id="cb20-108"><a href="#cb20-108"></a></span>
+<span id="cb20-111"><a href="#cb20-111"></a><span class="in">```{r}</span></span>
+<span id="cb20-112"><a href="#cb20-112"></a>Apptrees <span class="ot">&lt;-</span> trees <span class="sc">|&gt;</span></span>
+<span id="cb20-113"><a href="#cb20-113"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb20-114"><a href="#cb20-114"></a>    <span class="at">TFSpecies =</span> <span class="fu">ifelse</span>(</span>
+<span id="cb20-115"><a href="#cb20-115"></a>      <span class="sc">!</span>SPECIES <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"White spruce"</span>, <span class="st">"Crabapple"</span>, <span class="st">"Silver maple"</span>, <span class="st">"Hackberry"</span>, <span class="st">"Sugar maple"</span>, <span class="st">"Honey locust"</span>, <span class="st">"Norway maple"</span>, <span class="st">"American elm"</span>, <span class="st">"Red maple"</span>),</span>
+<span id="cb20-116"><a href="#cb20-116"></a>      <span class="st">"other"</span>,</span>
+<span id="cb20-117"><a href="#cb20-117"></a>      SPECIES</span>
+<span id="cb20-118"><a href="#cb20-118"></a>    )</span>
+<span id="cb20-119"><a href="#cb20-119"></a>  )</span>
+<span id="cb20-120"><a href="#cb20-120"></a></span>
+<span id="cb20-121"><a href="#cb20-121"></a><span class="in">```</span></span>
+<span id="cb20-122"><a href="#cb20-122"></a>            </span>
+<span id="cb20-123"><a href="#cb20-123"></a></span>
+<span id="cb20-124"><a href="#cb20-124"></a></span>
+<span id="cb20-127"><a href="#cb20-127"></a><span class="in">```{r}</span></span>
+<span id="cb20-128"><a href="#cb20-128"></a>Apptrees <span class="sc">|&gt;</span></span>
+<span id="cb20-129"><a href="#cb20-129"></a>  <span class="fu">count</span>(TFSpecies) <span class="sc">|&gt;</span></span>
+<span id="cb20-130"><a href="#cb20-130"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) </span>
+<span id="cb20-131"><a href="#cb20-131"></a><span class="in">```</span></span>
+<span id="cb20-132"><a href="#cb20-132"></a></span>
+</code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
