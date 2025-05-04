@@ -2,7 +2,7 @@
 
 ------------------------------------------------------------------------
 
-# Report {.unnumbered}
+# The Trees of Mac {.unnumbered}
 
 ```{r}
 library(shiny)
@@ -16,10 +16,17 @@ library(bslib)
 
 ## Our Motivation
 
--   Why did we want to explore this?
--   What are our research Questions?
--   What fuels this?
--   input photos of trees???.....
+As Macalester College students, we are constantly surrounded by the trees on campus.
+Walking to and from classes, meetings, and practices, it is hard to miss the 953 different trees around campus.
+Each tree has its own story and we wanted to dive deeper into them and explore.
+Understanding how the trees are planted around campus, the different species present, as well as their sizes are all things that we wanted to explore.
+In this project, the questions we are exploring are:
+
+##### ***What species of trees are planted around Macalester's campus?***
+
+##### ***What is the relationship between species and diameter?*** 
+
+##### ***Are there patterns in how species are planted?***
 
 <img src="Picture2.jpeg" height="500px"/>
 
@@ -37,15 +44,14 @@ library(bslib)
 -   What do we learn?
 -   What further questions does this lead to?
 
-## The Trees Across Campus
+## Across Campus
 
 <img src="Picture3.jpeg" height="500px"/>
 
 After exploring these diameters and the relations to the species we wanted to learn more about how species are planted across campus.
 To do this we wanted to explore the trees in their place and positioning around Macalester's campus.
 As shown in the map below, Trees are planted across Macalester's campus - the map displays the trees on campus and if you hover over each the species will be shown.
-Additionally, if you want to explore by species further, you can select each of the Top 9 species you want to see.
-Additionally, each of the top nine species have the same shadow color.
+Additionally, if you want to explore by species further, you can select each of the Top 9 species you want to see and each has a different color.
 
 ::: center
 <iframe src="https://idsmac-aersog--pair.shinyapps.io/trees/" width="100%" height="600px">
