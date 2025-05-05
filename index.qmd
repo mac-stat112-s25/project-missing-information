@@ -1,3 +1,9 @@
+---
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
 # The Trees of Mac {.unnumbered}
 
 ```{r}
@@ -6,6 +12,10 @@ library(leaflet)
 library(readr)
 library(here)
 library(bslib)
+library(ggplot2)
+library(tidyverse)
+library(DataExplorer)
+library(ggiraph)
 ```
 
 <img src="Picture1.jpeg" height="500px"/>
@@ -68,14 +78,16 @@ Continuing this exploration it would be interesting to explore when various tree
 
 ## Limitations and Future Work
 
+-   Work could benefit from exploring tree species specific traits.
 
+-   Work could benefit if more data was available (tree age, tree health, tree height)
 
+-   Work could benefit from understanding Macalester tree species patterns vs Minnesota as a state.
 
+## Slide Presentation
 
-## Slide Presentation  
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxtbkGS94a4f25iZECaGUGKHe9p53BtXtHMaY9vgrkmjY3d5A8tSFHKG5dn5xIQ4IGmHZJaY54BEJU/pubembed?start=false&loop=true&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxtbkGS94a4f25iZECaGUGKHe9p53BtXtHMaY9vgrkmjY3d5A8tSFHKG5dn5xIQ4IGmHZJaY54BEJU/pubembed?start=false&amp;loop=true&amp;delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
 
+</iframe>
 
-
-
-## Video Explaination 
+## Video Explaination
