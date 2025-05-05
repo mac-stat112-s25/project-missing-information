@@ -26,7 +26,7 @@ In this project, the questions we are exploring are:
 
 <img src="Picture2.jpeg" height="500px"/>
 
-## sBackground on the Data
+## Background on the Data
 
 -   where did we get it?
     Macalester Trees Inventory (Shared Google Drive) [Click here to vist the drive!](https://drive.google.com/drive/folders/1R1wIvCI6M_NHC9bqVe05kCE2zAmcreSM)
