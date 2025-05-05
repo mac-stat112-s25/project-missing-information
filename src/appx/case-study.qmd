@@ -1,11 +1,90 @@
 
 # Case Study {-}
 
-Professional Reports :" "NYC Ubers"
+Article : Uber Is Taking Millions Of Manhattan Rides Away From Taxis By Reuben Fischer-Baum and Carl Bialik
+
+[Click here to vist the article!](https://fivethirtyeight.com/features/uber-is-taking-millions-of-manhattan-rides-away-from-taxis/)
+
+## Professional Reports :"NYC Ubers"
 observations : 
+
 - Uber has significantly increased its pickups in Manhattan, largely by replacing taxi pickups in the core areas. 
+
 - Despite the large shift between Uber and taxis in Manhattan, the total number of pickups in Manhattan's core remained mostly unchanged.
+
 - Outside of Manhattan, particularly in Brooklyn and Queens, both Uber and taxi pickups increased.
+
 - Overall, total pickups for Uber, yellow cabs, and green cabs in New York City increased from 48 million to 51 million between the comparable April-June periods (listed under Uber + Cabs)
 
-- structurally the way they organized this report is by showing how much change has occured, then exploring why there has been such a large increase (are ubers supplementing or replacing cabs?), and then dividing that sub question into two parts Uber data spatially and taxi cab data spatially. They then answered their overall question by summarizing their learnings and pointing out flaws in their data process ("does not show the full picture").
+
+## This was how they structured there data exploration :
+
+1. Framing the Core Question
+- The article starts by posing a clear hypothesis: Uber has taken a significant number of rides from traditional yellow taxis in Manhattan. This sets the foundation for a comparative, data-driven exploration.
+
+2. Data Sources Used
+- They use open NYC taxi data and Uber’s own trip data, which were made publicly available due to city regulations. Key details:
+
+- Yellow taxi trip records from the NYC Taxi and Limousine Commission (TLC)
+
+- Uber pickup data, also from TLC, for a comparable time period
+
+- This data includes timestamps, pickup locations (by neighborhood or lat/long), and trip counts.
+
+3. Spatial Focus
+- They limit the scope of analysis to Manhattan south of 96th Street, the core area for both yellow taxi and Uber activity. This geographic filtering:
+
+- Focuses the analysis on the most competitive region
+
+- Eliminates noise from less relevant boroughs or areas with low taxi/Uber activity
+
+4. Comparative Time Series Analysis
+They charted:
+
+- Yellow taxi pickups by month, showing a decline over time
+
+- Uber pickups by month, showing a corresponding rise
+
+- This comparison helped visualize the shift in ridership over time.
+
+5. Heat Maps and Spatial Trends
+- They presented pickup density maps comparing Uber and taxi usage:
+
+- Showed where Uber is replacing taxis
+
+- Highlighted overlapping service areas and gaps
+
+6. Patterns
+- They analyzed hourly and daily usage patterns, showing:
+
+- Differences in peak hours
+
+- Which service dominates at different times of day
+
+7. Interactivity and Visual Design
+The article used:
+
+- Interactive charts and sliders to let readers explore the data
+
+- Simple visual comparisons to emphasize trends
+
+- Clear labeling and consistent color schemes 
+
+8. Interpretation and Causality
+- They avoid overly deterministic claims about causality. Showed clear trends but acknowledged
+
+- Other factors could contribute (e.g., consumer preferences, ease of hailing via app)
+
+- Correlation doesn’t always mean direct causation
+
+9. Contextual Commentary
+- They enrich the data story with quotes from experts and historical context, providing:
+
+- Policy implications
+
+- The economic impact on taxi drivers and medallion holders. 
+
+
+## Overall : 
+
+- structurally the way they organized this report is by showing how much change has occurred, then exploring why there has been such a large increase (are ubers supplementing or replacing cabs?), and then dividing that sub question into two parts Uber data spatially and taxi cab data spatially. They then answered their overall question by summarizing their learnings and pointing out flaws in their data process ("does not show the full picture") or ways to improve their study.

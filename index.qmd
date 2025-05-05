@@ -29,13 +29,19 @@ In this project, the questions we are exploring are:
 ## Background on the Data
 
 -   where did we get it?
+Macalester Trees Inventory (Shared Google Drive) 
+[Click here to vist the drive!](https://drive.google.com/drive/folders/1R1wIvCI6M_NHC9bqVe05kCE2zAmcreSM)
+
 -   what was included?
+MacalesterTreeInventoryCSV + MacalesterTreeInventorySHP
+
 -   who created it?
+AIDAN REYNOLDS (‘25) AND THE MACALESTER SUSTAINABILITY OFFICE 
 
 ## Summary Statistics
 
 -   what does some of the Data preliminarily look like?
--   Shay's plot
+-   Shay's plot 
 -   Explanation and Exploration of the data and species?
 -   What do we learn?
 -   What further questions does this lead to?
@@ -60,3 +66,5 @@ Certain species appear to be planted more around campus while others are very sp
 There are so, so many different species of trees planted around campus, which is so cool.
 The boundaries of campus are lined with trees.
 Continuing this exploration it would be interesting to explore when various trees were planted, and see if there are further patterns!
+
+## Limitations and Future Work 
