@@ -1,9 +1,4 @@
----
-
----
-
-
-# The Trees of Mac {-}
+# The Trees of Mac {.unnumbered}
 
 ```{r}
 library(shiny)
@@ -25,7 +20,7 @@ In this project, the questions we are exploring are:
 
 ##### ***What species of trees are planted around Macalester's campus?***
 
-##### ***What is the relationship between species and diameter?*** 
+##### ***What is the relationship between species and diameter?***
 
 ##### ***Are there patterns in how species are planted?***
 

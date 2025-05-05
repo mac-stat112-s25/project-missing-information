@@ -1,8 +1,5 @@
----
 
----
-
-# Ashlyn R EDA {-}
+# Ashlyn R {-}
 
 This is the EDA completed by Ashlyn!
 

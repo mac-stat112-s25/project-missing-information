@@ -1,17 +1,14 @@
----
-
----
 
 # Proposal {.unnumbered}
 
-1.  ***What this project will entail!***
+## What this project will entail!
 
 Trees at Mac, is a project done by Ashlyn and Shaylee exploring the trees of Macalester, their species, diameters, positions, and whether or not they are memorials.
 We will be doing some analysis to determine ages, and other related information regarding their health.
 We want to play around with a spatial project, allowing an interactive user experience.
 The inspiration for our project comes from wanting to explore the area around us and learn a little more about the trees that we see almost every day.
 
-2.  ***Implementation Plan:***
+## Implementation Plan: 
 
 +--------------+--------------------------------+----------------------------+---------------------------------------+
 | Week         | What we are Doing & Day/Topic  |                            |                                       |
@@ -40,6 +37,6 @@ The inspiration for our project comes from wanting to explore the area around us
 | W15          | -   Finalize Report            | -   Record Video           | DONE                                  |
 +--------------+--------------------------------+----------------------------+---------------------------------------+
 
-3. ***End Results and Goals:***
+## End Results and Goals:
 
 The final result and goals of our project are to both gain a greater understanding of the trees on Macalester's campus as well as grow our personal data skills. By experimenting and exploring new types of packages and applications in R we are able to grow our Data Science skills. Through our exploration and analysis we are able to begin to understand and learn about the trees of Macalester, the patterns of growth of the various species planted, as well as any patterns or trends associated with their planting. 
