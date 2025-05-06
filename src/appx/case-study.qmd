@@ -87,4 +87,4 @@ The article used:
 
 ## Overall : 
 
-- structurally the way they organized this report is by showing how much change has occurred, then exploring why there has been such a large increase (are ubers supplementing or replacing cabs?), and then dividing that sub question into two parts Uber data spatially and taxi cab data spatially. They then answered their overall question by summarizing their learnings and pointing out flaws in their data process ("does not show the full picture") or ways to improve their study.
+- Structurally the way they organized this report is by showing how much change has occurred, then exploring why there has been such a large increase (are ubers supplementing or replacing cabs?), and then dividing that sub question into two parts Uber data spatially and taxi cab data spatially. They then answered their overall question by summarizing their learnings and pointing out flaws in their data process ("does not show the full picture") or ways to improve their study.

@@ -2,6 +2,11 @@
 editor: 
   markdown: 
     wrap: sentence
+execute:
+  cache: true
+  echo: false
+  warning: false
+  error: false
 ---
 
 # The Trees of Mac {.unnumbered}
@@ -40,7 +45,7 @@ In this project, the questions we are exploring are:
 
 -   Where did we get it? Who created it? What was included?
 
-We researched nature topics specifically related to Macalester so that we could learn more about our campus and the outdoors, and found this amazing shared drive created by AIDAN REYNOLDS (‘25) AND THE MACALESTER SUSTAINABILITY OFFICE that included two main files a CSV and a shape file.
+We researched nature topics specifically related to Macalester so that we could learn more about our campus and the outdoors, and found this amazing shared drive created by AIDAN REYNOLDS (‘25) AND THE MACALESTER SUSTAINABILITY OFFICE that included two main files: a CSV and a shape file.
 
 Macalester Trees Inventory (Shared Google Drive) [Click here to vist the drive!](https://drive.google.com/drive/folders/1R1wIvCI6M_NHC9bqVe05kCE2zAmcreSM)
 
@@ -68,16 +73,62 @@ Result: The top 10 most common tree SPECIES on campus are :
 This then lead us to wonder...
 
 Why is it that these trees are most common on campus?
-100 White spruce trees is a lot of one tree.
+One-hundred White spruce trees is a lot of one tree.
 Does the sizing of the trees play any role in this?
-Is it possible that if a tree species is very small than it could skew the number of them that are planted on campus because they take up lots of or very little room?
+Is it possible that if a tree species is very small that it could skew the number of them that are planted on campus because they take up lots of or very little room?
 
 So with these questions in mind we than explored more about the tree species diameters.
 First looking at all of the data and than narrowing in on the top most common 9 species and their diameters.
 
--   Shay's plot
 
-I created this plot to examine if there was a correlation between these two aspect (species and diameter) on campus.
+
+
+ **Shay's plot** :
+
+I created this plot to examine if there was any connection between these two aspects (species and diameter) on campus.
+
+```{r}
+trees <- read_csv(here("data", "trees1.csv"))
+```
+
+```{r}
+top_9_species <- trees |>
+  filter(SPECIES %in% c("White spruce","Crabapple","Silver maple","Hackberry", "Sugar maple","Honey locust","Norway maple","American elm","Red maple"))|>
+  select('Diameter at Breast Heigh (DBH)',SPECIES)
+```
+
+```{r}
+species_counts <- top_9_species |>
+  count(SPECIES, name = "Count")
+```
+
+```{r}
+sum_top_9 <- top_9_species |>
+  group_by(SPECIES) |>
+  summarize(
+    "smallest diameter" = min(`Diameter at Breast Heigh (DBH)`),
+    "average diameter" = mean(`Diameter at Breast Heigh (DBH)`),
+    "largest diameter" = max(`Diameter at Breast Heigh (DBH)`),
+    .groups = "drop")
+
+```
+
+```{r}
+
+sum_top_9_long <- sum_top_9 |>
+  pivot_longer(cols = c(`smallest diameter`, `average diameter`, `largest diameter`),
+               names_to = "Type",
+               values_to = "Diameter")
+
+```
+
+```{r}
+sum_top_9_long <- sum_top_9_long |>
+  left_join(species_counts, by = "SPECIES") |>
+  mutate(
+    Type = factor(Type, levels = c("smallest diameter", "average diameter", "largest diameter")),
+    SPECIES = fct_reorder(SPECIES, Count, .desc = TRUE))
+```
 
 ```{r}
 ggplot(sum_top_9_long,aes(x= SPECIES, y = Diameter, fill = Type))+
@@ -88,11 +139,13 @@ ggplot(sum_top_9_long,aes(x= SPECIES, y = Diameter, fill = Type))+
 fig.alt = "Here is a bar graph that on the y-axis shows the top 9 most common species on campus bottom being the most common and top being the least common of the 9 pictured. Then across the x-axis is the trees diameter at breast height in inches. Each species has three individual bars for each diameter measurement smallest, average, largest within their species to try and give a sumamry of how their diameters range."
 ```
 
--   Explanation and Exploration of the data and species?
+-   Explanation and Exploration
+    -   What do we learn? What further questions does this lead to?
 
--   What do we learn?
-
--   What further questions does this lead to?
+This bar graph shows the top 9 species on campus and their smallest average and largest diameters recorded from its on campus population.
+We wondered if the tree size influenced how many of that species were planted on campus, and as you can see the average diameters for each of these top 9 species are on the smaller to medium side, confirming that for the most part Macalester plants more of the tree species that aren’t the largest trees.
+That makes sense for a college in the city.
+However, you can see that within these species there is a huge range of diameters between smallest and largest. So, that is why we decided to look at where the trees were located on campus to better understand the patterns of where these most popular species were planted because it's hard to understand by strictly looking at numbers.
 
 ## Across Campus
 
@@ -131,6 +184,4 @@ Continuing this exploration it would be interesting to explore when various tree
 
 ## Video Explanation
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sqsN07DNquM?si=cbwlWaqrTyxDlu2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sqsN07DNquM?si=zIdf9bhRU1yUq4RS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
