@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Trees of Macalester",
     "section": "",
-    "text": "The Trees of Mac\nCodelibrary(shiny)\nlibrary(leaflet)\nlibrary(readr)\nlibrary(here)\nlibrary(bslib)\nlibrary(ggplot2)\nlibrary(tidyverse)\nlibrary(DataExplorer)\nlibrary(ggiraph)",
+    "text": "The Trees of Mac",
     "crumbs": [
       "The Trees of Mac"
     ]
@@ -24,7 +24,7 @@
     "href": "index.html#background-on-the-data",
     "title": "Trees of Macalester",
     "section": "Background on the Data",
-    "text": "Background on the Data\n\nwhere did we get it? Macalester Trees Inventory (Shared Google Drive) Click here to vist the drive!\nwhat was included? MacalesterTreeInventoryCSV + MacalesterTreeInventorySHP\nwho created it? AIDAN REYNOLDS (’25) AND THE MACALESTER SUSTAINABILITY OFFICE",
+    "text": "Background on the Data\n\nWhere did we get it? Who created it? What was included?\n\nWe researched nature topics specifically related to Macalester so that we could learn more about our campus and the outdoors, and found this amazing shared drive created by AIDAN REYNOLDS (’25) AND THE MACALESTER SUSTAINABILITY OFFICE that included two main files: a CSV and a shape file.\nMacalester Trees Inventory (Shared Google Drive) Click here to vist the drive!",
     "crumbs": [
       "The Trees of Mac"
     ]
@@ -34,7 +34,7 @@
     "href": "index.html#summary-statistics",
     "title": "Trees of Macalester",
     "section": "Summary Statistics",
-    "text": "Summary Statistics\n\nwhat does some of the Data preliminarily look like?\nShay’s plot\nExplanation and Exploration of the data and species?\nWhat do we learn?\nWhat further questions does this lead to?",
+    "text": "Summary Statistics\n\nWhat does some of the Data preliminarily look like? To begin we wanted to know what the most common tree species were on campus and did Exploratory Data Analysis (EDA) to get to know our data.\n\nResult: The top 10 most common tree SPECIES on campus are :\nTop 10 Common Trees - Table\n\n\nSpecies\nCount\n\n\n\nWhite spruce\n100\n\n\nCrabapple\n78\n\n\nSilver maple\n66\n\n\nHackberry\n65\n\n\nSugar maple\n64\n\n\nHoney locust\n55\n\n\nNorway maple\n54\n\n\nAmerican elm\n31\n\n\nRed maple\n31\n\n\nEastern redbud\n27\n\n\n\nThis then lead us to wonder…\nWhy is it that these trees are most common on campus? One-hundred White spruce trees is a lot of one tree. Does the sizing of the trees play any role in this? Is it possible that if a tree species is very small that it could skew the number of them that are planted on campus because they take up lots of or very little room?\nSo with these questions in mind we than explored more about the tree species diameters. First looking at all of the data and than narrowing in on the top most common 9 species and their diameters.\nShay’s plot :\nI created this plot to examine if there was any connection between these two aspects (species and diameter) on campus.\n\n\n\n\n\n\n\n\n\nExplanation and Exploration\n\nWhat do we learn? What further questions does this lead to?\n\n\n\nThis bar graph shows the top 9 species on campus and their smallest average and largest diameters recorded from its on campus population. We wondered if the tree size influenced how many of that species were planted on campus, and as you can see the average diameters for each of these top 9 species are on the smaller to medium side, confirming that for the most part Macalester plants more of the tree species that aren’t the largest trees. That makes sense for a college in the city. However, you can see that within these species there is a huge range of diameters between smallest and largest. So, that is why we decided to look at where the trees were located on campus to better understand the patterns of where these most popular species were planted because it’s hard to understand by strictly looking at numbers.",
     "crumbs": [
       "The Trees of Mac"
     ]
@@ -70,11 +70,11 @@
     ]
   },
   {
-    "objectID": "index.html#video-explaination",
-    "href": "index.html#video-explaination",
+    "objectID": "index.html#video-explanation",
+    "href": "index.html#video-explanation",
     "title": "Trees of Macalester",
-    "section": "Video Explaination",
-    "text": "Video Explaination",
+    "section": "Video Explanation",
+    "text": "Video Explanation",
     "crumbs": [
       "The Trees of Mac"
     ]
@@ -95,7 +95,7 @@
     "href": "src/appx/Shaylee_Teamwork.html",
     "title": "Shaylee O",
     "section": "",
-    "text": "10 Tips for Effective Teamwork\n#1. Practice Good Communication Skills Review the “10 Tips for Communication in the Workplace,” FCS-2602 on the Alabama Extension website. Practice active listening. Deliver a clear message. Clear up misunderstandings.\n#2. Work Well with Everyone Identify different personalities on the team. Learn how to work together. Seek to understand team members. Respect differences\n#3. Clarify Roles, Responsibilities, and Accountabilities Identify the roles of each team member. Align each member’s strengths with their assigned role. Give each team member ownership of their role and tasks. Respect each other’s roles.\n#4. Set Clear Goals Determine a vision for the team collectively. Create SMART (specific, measurable, attainable, relevant, time-bound) goals. Periodically evaluate the progress of goals. Adjust goals as needed.\n#5. Value Each Member’s Voice Respect each team member. Be willing to consider other’s ideas. Allow each team member to contribute to the team. Recognize the value of each team member.\n#6. Have a Team Mindset Rather than an I Mindset Focus on what’s best for the team. Collaborate with team members. Define team goals and expectations. Appreciate each team member.\n#7. Be Supportive of All Team Members. Encourage team members. Assist team members as needed. Share information with team members. Supply team members with the tools they need.\n#8. Recognize the Value of Each Team Member Voice appreciation to everyone. Recognize individual contributions. Do random acts of kindness. Say “please” and “thank you.”\n#9. Build Relationships Build trusting relationships. Be transparent. Take time to get to know each other. Be available.\n#10. Break Down Barriers Encourage open dialogue. Address communication issues. Avoid assumptions. Be careful of the perceptions you give These tips will help build an effective team focused on goals, relationships, and the success of the team. Appreciate team members and recognize their value and contributions to the team’s success. Sometimes our perceptions may lead us to the wrong conclusions. Understand that things are not always as they appear.",
+    "text": "10 Tips for Effective Teamwork\nReview the “10 Tips for Communication in the Workplace,” FCS-2602 on the Alabama Extension website.\n#1. Practice Good Communication Skills Practice active listening. Deliver a clear message. Clear up misunderstandings.\n#2. Work Well with Everyone Identify different personalities on the team. Learn how to work together. Seek to understand team members. Respect differences\n#3. Clarify Roles, Responsibilities, and Accountabilities Identify the roles of each team member. Align each member’s strengths with their assigned role. Give each team member ownership of their role and tasks. Respect each other’s roles.\n#4. Set Clear Goals Determine a vision for the team collectively. Create SMART (specific, measurable, attainable, relevant, time-bound) goals. Periodically evaluate the progress of goals. Adjust goals as needed.\n#5. Value Each Member’s Voice Respect each team member. Be willing to consider other’s ideas. Allow each team member to contribute to the team. Recognize the value of each team member.\n#6. Have a Team Mindset Rather than an I Mindset Focus on what’s best for the team. Collaborate with team members. Define team goals and expectations. Appreciate each team member.\n#7. Be Supportive of All Team Members. Encourage team members. Assist team members as needed. Share information with team members. Supply team members with the tools they need.\n#8. Recognize the Value of Each Team Member Voice appreciation to everyone. Recognize individual contributions. Do random acts of kindness. Say “please” and “thank you.”\n#9. Build Relationships Build trusting relationships. Be transparent. Take time to get to know each other. Be available.\n#10. Break Down Barriers Encourage open dialogue. Address communication issues. Avoid assumptions. Be careful of the perceptions you give These tips will help build an effective team focused on goals, relationships, and the success of the team. Appreciate team members and recognize their value and contributions to the team’s success. Sometimes our perceptions may lead us to the wrong conclusions. Understand that things are not always as they appear.",
     "crumbs": [
       "Effective Teamwork",
       "Shaylee O"
@@ -194,7 +194,7 @@
     "href": "src/appx/case-study.html#overall",
     "title": "Case Study",
     "section": "Overall :",
-    "text": "Overall :\n\nstructurally the way they organized this report is by showing how much change has occurred, then exploring why there has been such a large increase (are ubers supplementing or replacing cabs?), and then dividing that sub question into two parts Uber data spatially and taxi cab data spatially. They then answered their overall question by summarizing their learnings and pointing out flaws in their data process (“does not show the full picture”) or ways to improve their study.",
+    "text": "Overall :\n\nStructurally the way they organized this report is by showing how much change has occurred, then exploring why there has been such a large increase (are ubers supplementing or replacing cabs?), and then dividing that sub question into two parts Uber data spatially and taxi cab data spatially. They then answered their overall question by summarizing their learnings and pointing out flaws in their data process (“does not show the full picture”) or ways to improve their study.",
     "crumbs": [
       "Appendices",
       "Case Study"
