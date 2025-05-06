@@ -1,0 +1,165 @@
+
+# Shaylee O {-}
+
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+library(here)
+library(readr)
+```
+
+
+```{r}
+trees <- read_csv(here("data", "trees1.csv"))
+
+dim(trees)
+head(trees)
+tail(trees)
+
+```
+
+```{r}
+trees |> 
+  count(SPECIES)|>
+  arrange(desc(n))
+
+
+```
+
+```{r}
+trees |> 
+  count(SPECIES)|>
+  arrange(desc(n))
+```
+
+```{r}
+trees |> 
+  count(SPECIES)|>
+  arrange(desc(n))|>
+  head(5)
+```
+
+The top five most common tree SPECIES on campus are :
+White spruce - 100, 
+Crabapple - 78, 
+Silver maple - 66, 
+Hackberry - 65, 
+Sugar maple - 64. 
+
+then, top 10 are :
+Honey locust - 55
+Norway maple - 54
+American elm - 31
+Red maple - 31
+Eastern redbud - 27 
+
+Why is it that these trees are most common on campus? 100 White spruce is a lot of one tree. Does the sizing of the trees play any role in this? Because it is possible that if a tree species is very small than it could skew the number of them that are planted on campus because they take up lots of or very little room. 
+
+```{r}
+trees |>
+  summarize(smallest = min(`Diameter at Breast Heigh (DBH)`), medium = mean(`Diameter at Breast Heigh (DBH)`), largest = max(`Diameter at Breast Heigh (DBH)`))
+```
+```{r}
+trees |>
+  select(`Diameter at Breast Heigh (DBH)`, SPECIES)|>
+  arrange(desc(`Diameter at Breast Heigh (DBH)`))|>
+  head(10)
+```
+
+```{r}
+top_9_species <- trees |>
+  filter(SPECIES %in% c("White spruce","Crabapple","Silver maple","Hackberry", "Sugar maple","Honey locust","Norway maple","American elm","Red maple"))|>
+  select('Diameter at Breast Heigh (DBH)',SPECIES)
+```
+
+```{r}
+species_counts <- top_9_species |>
+  count(SPECIES, name = "Count")
+```
+
+
+```{r}
+sum_top_9 <- top_9_species |>
+  group_by(SPECIES) |>
+  summarize(
+    "smallest diameter" = min(`Diameter at Breast Heigh (DBH)`),
+    "average diameter" = mean(`Diameter at Breast Heigh (DBH)`),
+    "largest diameter" = max(`Diameter at Breast Heigh (DBH)`),
+    .groups = "drop")
+str(sum_top_9)
+```
+
+```{r}
+
+sum_top_9_long <- sum_top_9 |>
+  pivot_longer(cols = c(`smallest diameter`, `average diameter`, `largest diameter`),
+               names_to = "Type",
+               values_to = "Diameter")
+
+```
+
+
+```{r}
+sum_top_9_long <- sum_top_9_long |>
+  left_join(species_counts, by = "SPECIES") |>
+  mutate(
+    Type = factor(Type, levels = c("smallest diameter", "average diameter", "largest diameter")),
+    SPECIES = fct_reorder(SPECIES, Count, .desc = TRUE))
+```
+
+
+```{r}
+ggplot(sum_top_9_long,aes(x= SPECIES, y = Diameter, fill = Type))+
+  geom_col(position = position_dodge())+
+  coord_flip()+
+  labs(title ="Campus Trees Diameter by Species", x = "Species (top 9)", y = "Diameter at Breast Height (inches)", fill = "Measurement Type", caption = "Data from Macalester Tree Inventory Drive (LAST UPDATED JULY 2024)")+
+  theme_minimal()
+
+```
+```{r}
+library(ggiraph)
+
+
+```
+
+
+```{r}
+library(dplyr)
+trees_clean <- trees %>% filter(!is.na(Memorial))
+
+```
+
+```{r}
+trees_clean |>
+  select(SPECIES, Memorial)
+
+```
+
+
+38 tree memorials!
+
+```{r}
+trees_clean |>
+  group_by(SPECIES) |>
+  summarise(Memorials = paste(Memorial, collapse = ", "), .groups = "drop")
+
+```
+Sugar maple - 5 memorials 
+white oak - 3 memorials
+Ohio buckeye - 3 
+American Elm - 3
+blue spruce - 3
+
+```{r}
+library(DataExplorer)
+
+create_report(trees)
+
+```
+
+```{r}
+introduce(trees)
+```
+
+

@@ -1,5 +1,42 @@
----
-title: "Proposal"
----
 
-Your proposal will go here.
+# Proposal {.unnumbered}
+
+## What this project will entail!
+
+Trees at Mac, is a project done by Ashlyn and Shaylee exploring the trees of Macalester, their species, diameters, positions, and whether or not they are memorials.
+We will be doing some analysis to determine ages, and other related information regarding their health.
+We want to play around with a spatial project, allowing an interactive user experience.
+The inspiration for our project comes from wanting to explore the area around us and learn a little more about the trees that we see almost every day.
+
+## Implementation Plan: 
+
++--------------+--------------------------------+----------------------------+---------------------------------------+
+| Week         | What we are Doing & Day/Topic  |                            |                                       |
++==============+================================+============================+=======================================+
+|              | 4/7- Brainstrom                | 4/9 - Crafting             | 4/11 - Work                           |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+| W11          | -   Come up with ideas         | -   Due: Proposal          | -   Due: Teamwork Reading             |
+|              |                                |                            |                                       |
+|              | -   Finalize                   | -   Due: Case Study        | -   Finalize –\> plan                 |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+|              | 4/14 - Comms                   | 4/16 - Work                | 4/18 - Work                           |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+| W12          | -   Mutate and work with data  | -   Begin building website | -   Starting building website out     |
+|              | -   (Ash will not be in class) |                            |                                       |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+|              | 4/21 - Work                    | 4/23 - Work                | 4/25 - Work                           |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+| W13          | -   Work on website            | -   Presentation Creation  | -   Finalize presentation and website |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+|              | 4/28- Present                  | 4/30- Present              | 5/2- Final Edits                      |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+| W14          | Presented                      | -   Edits                  | -   Report Creation                   |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+|              | 5/5                            | 5/7                        | 5/9                                   |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+| W15          | -   Finalize Report            | -   Record Video           | DONE                                  |
++--------------+--------------------------------+----------------------------+---------------------------------------+
+
+## End Results and Goals:
+
+The final result and goals of our project are to both gain a greater understanding of the trees on Macalester's campus as well as grow our personal data skills. By experimenting and exploring new types of packages and applications in R we are able to grow our Data Science skills. Through our exploration and analysis we are able to begin to understand and learn about the trees of Macalester, the patterns of growth of the various species planted, as well as any patterns or trends associated with their planting. 

@@ -1,0 +1,107 @@
+
+# Ashlyn R {-}
+
+This is the EDA completed by Ashlyn!
+
+```{r}
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(gplots)
+library(leaflet)
+library(here)
+
+```
+
+
+
+
+
+```{r}
+trees <- read_csv(here("src/appx", "Apptrees.csv"))
+  
+```
+
+
+```{r}
+head(trees)
+```
+
+
+```{r}
+summary(trees)
+```
+
+```{r}
+
+#This I want to look cooler...
+
+trees |>
+  count(SPECIES) |>
+  arrange(desc(n)) 
+```
+
+```{r}
+trees |>
+  summarize(mean(`Diameter at Breast Heigh (DBH)`), min(`Diameter at Breast Heigh (DBH)`), max(`Diameter at Breast Heigh (DBH)`))
+```
+
+```{r}
+
+#Maybe only show a select grouping?
+
+trees |>
+  group_by(SPECIES_BIN) |>
+  summarize(mean(`Diameter at Breast Heigh (DBH)`), min(`Diameter at Breast Heigh (DBH)`), max(`Diameter at Breast Heigh (DBH)`))
+```
+
+```{r}
+# Just a plotting frame -- all species, label is just the common species name
+leaflet(data = trees) |> 
+  addTiles() |> 
+  addCircleMarkers(label = ~`Common Species Name`, fillColor = col2hex("green"),lng = ~x, lat = ~y, fillOpacity = 1, color = "black", radius = 2.5)
+```
+
+```{r}
+treesm <- trees|>
+  filter(`Is it a memorial?` == "Yes")
+```
+
+```{r}
+
+leaflet(data = treesm) |> 
+  addTiles() |> 
+  addCircleMarkers(label = ~`Common Species Name`, fillColor = col2hex("green"),lng = ~x, lat = ~y, fillOpacity = 1, color = "black", radius = 4)
+```
+
+
+
+```{r}
+treesm <- trees|>
+  filter(`Is it a memorial?` == "Yes")
+```
+
+
+
+```{r}
+Apptrees <- trees |>
+  mutate(
+    TFSpecies = ifelse(
+      !SPECIES %in% c("White spruce", "Crabapple", "Silver maple", "Hackberry", "Sugar maple", "Honey locust", "Norway maple", "American elm", "Red maple"),
+      "other",
+      SPECIES
+    )
+  )
+
+```
+			
+
+
+```{r}
+Apptrees |>
+  count(TFSpecies) |>
+  arrange(desc(n)) 
+```
+
+

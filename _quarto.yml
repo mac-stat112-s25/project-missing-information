@@ -11,8 +11,8 @@ project:
 
 
 book:
-  title: "project title"
-  author: ["student 1 first and last name", "student 2 first and last name", "student 3 first and last name"]
+  title: "Trees of Macalester"
+  author: ["Shaylee O'Grady", "Ashlyn Ryan"]
   date: today  # use today to update date published based on last time project was edited
   date-format: full
   # favicon: images/logo.png
@@ -29,7 +29,7 @@ book:
 
 
   sidebar:
-    title: "sidebar title"
+    title: "Group Project"
     collapse-level: 2
     style: "docked"
     pinned: true
@@ -38,9 +38,23 @@ book:
   chapters:
     - index.qmd
 
+    - part: "Effective Teamwork"
+      chapters:
+        - src/appx/AshlynRyan.qmd
+        - src/appx/Shaylee_Teamwork.qmd
+    
+    - part: "EDA"
+      chapters:
+        - src/appx/AR.qmd
+        - src/appx/SO.qmd
+  
+  
   appendices:
   - src/appx/proposal.qmd
   - src/appx/case-study.qmd
+
+ 
+
 
 
 
@@ -63,6 +77,7 @@ format:
     code-block-border-left: "#1482FA"
     code-tools: true
     page-layout: full
+    code-fold: true
 
   # pdf:
   #   documentclass: scrreprt
@@ -72,6 +87,9 @@ format:
 
 execute:
   cache: true
+  echo: true
+  warning: false
+  error: false
 #   freeze: auto # remove when using GitHub action to execute code
 
 

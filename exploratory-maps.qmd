@@ -1,0 +1,24 @@
+---
+title: "Exploratory Maps"
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(gplots)
+library(leaflet)
+library(here)
+
+```
+
+
+
+
+
+```{r}
+trees <- read_csv(here("data", "trees1.csv"))
+  
+```
+
