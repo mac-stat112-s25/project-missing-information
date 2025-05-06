@@ -49,10 +49,14 @@ In this project, the questions we are exploring are:
 
 ## Summary Statistics
 
--   what does some of the Data preliminarily look like?
+-   What does some of the Data preliminarily look like?
+
 -   Shay's plot
+
 -   Explanation and Exploration of the data and species?
+
 -   What do we learn?
+
 -   What further questions does this lead to?
 
 ## Across Campus
