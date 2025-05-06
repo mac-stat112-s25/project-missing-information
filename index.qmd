@@ -38,20 +38,55 @@ In this project, the questions we are exploring are:
 
 ## Background on the Data
 
--   where did we get it?
-    Macalester Trees Inventory (Shared Google Drive) [Click here to vist the drive!](https://drive.google.com/drive/folders/1R1wIvCI6M_NHC9bqVe05kCE2zAmcreSM)
+-   Where did we get it? Who created it? What was included?
 
--   what was included?
-    MacalesterTreeInventoryCSV + MacalesterTreeInventorySHP
+We researched nature topics specifically related to Macalester so that we could learn more about our campus and the outdoors, and found this amazing shared drive created by AIDAN REYNOLDS (‘25) AND THE MACALESTER SUSTAINABILITY OFFICE that included two main files a CSV and a shape file.
 
--   who created it?
-    AIDAN REYNOLDS (‘25) AND THE MACALESTER SUSTAINABILITY OFFICE
+Macalester Trees Inventory (Shared Google Drive) [Click here to vist the drive!](https://drive.google.com/drive/folders/1R1wIvCI6M_NHC9bqVe05kCE2zAmcreSM)
 
 ## Summary Statistics
 
--   What does some of the Data preliminarily look like?
+-   What does some of the Data preliminarily look like? To begin we wanted to know what the most common tree species were on campus and did Exploratory Data Analysis (EDA) to get to know our data.
+
+Result: The top 10 most common tree SPECIES on campus are :
+
+**Top 10 Common Trees - Table**
+
+| Species        | Count |
+|----------------|-------|
+| White spruce   | 100   |
+| Crabapple      | 78    |
+| Silver maple   | 66    |
+| Hackberry      | 65    |
+| Sugar maple    | 64    |
+| Honey locust   | 55    |
+| Norway maple   | 54    |
+| American elm   | 31    |
+| Red maple      | 31    |
+| Eastern redbud | 27    |
+
+This then lead us to wonder...
+
+Why is it that these trees are most common on campus?
+100 White spruce trees is a lot of one tree.
+Does the sizing of the trees play any role in this?
+Is it possible that if a tree species is very small than it could skew the number of them that are planted on campus because they take up lots of or very little room?
+
+So with these questions in mind we than explored more about the tree species diameters.
+First looking at all of the data and than narrowing in on the top most common 9 species and their diameters.
 
 -   Shay's plot
+
+I created this plot to examine if there was a correlation between these two aspect (species and diameter) on campus.
+
+```{r}
+ggplot(sum_top_9_long,aes(x= SPECIES, y = Diameter, fill = Type))+
+  geom_col(position = position_dodge())+
+  coord_flip()+
+  labs(title ="Campus Trees Diameter by Species", x = "Species (top 9)", y = "Diameter at Breast Height (inches)", fill = "Measurement Type", caption = "Data from Macalester Tree Inventory Drive (LAST UPDATED JULY 2024)")+
+  theme_minimal()
+fig.alt = "Here is a bar graph that on the y-axis shows the top 9 most common species on campus bottom being the most common and top being the least common of the 9 pictured. Then across the x-axis is the trees diameter at breast height in inches. Each species has three individual bars for each diameter measurement smallest, average, largest within their species to try and give a sumamry of how their diameters range."
+```
 
 -   Explanation and Exploration of the data and species?
 
@@ -90,8 +125,12 @@ Continuing this exploration it would be interesting to explore when various tree
 
 ## Slide Presentation
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxtbkGS94a4f25iZECaGUGKHe9p53BtXtHMaY9vgrkmjY3d5A8tSFHKG5dn5xIQ4IGmHZJaY54BEJU/pubembed?start=false&amp;loop=true&amp;delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSxtbkGS94a4f25iZECaGUGKHe9p53BtXtHMaY9vgrkmjY3d5A8tSFHKG5dn5xIQ4IGmHZJaY54BEJU/pubembed?start=false&amp;loop=true&amp;delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true">
+
+</iframe>
 
 ## Video Explanation
 
-<iframe width="960" height="569" src="https://www.youtube.com/embed/sqsN07DNquM?si=cbwlWaqrTyxDlu2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sqsN07DNquM?si=cbwlWaqrTyxDlu2c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+</iframe>
